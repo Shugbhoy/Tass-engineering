@@ -196,7 +196,7 @@ const MODULES = [
           { type: "comparison", question: "Give an example of when you worked effectively as part of a team.", weak: "I work well in a team. I am a good communicator and I always do my share.", strong: "In my current role in logistics, our team had to restructure our entire picking process during a system migration with 48 hours' notice. I coordinated between four colleagues, divided the manual tasks, and tracked progress against our daily targets on a whiteboard. We hit 94% of our standard output on day one of the new system. I learned that in high-pressure situations, clarity of communication and keeping people focused on the task — not the problem — makes the difference." },
           { type: "comparison", question: "Describe a time when you solved a problem.", weak: "I am good at solving problems. I stay calm under pressure and always find a solution.", strong: "During my HNC project, a component I had designed failed tolerance testing at the third iteration. Rather than guessing the fix, I went back to the original specification, mapped each measurement against the tolerance band, and identified that the error had compounded across two dimensions. I redesigned one dimension only, reran the test, and it passed. The lesson I took was that systematic diagnosis is faster than trial and error — and that matters in an engineering environment where materials and time are not free." }
         ]
-      }
+      },
       {
         heading: "Obtaining a reference",
         content: [
