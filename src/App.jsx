@@ -68,7 +68,58 @@ const MODULES = [
         ]
       },
       {
-        heading: "3.1 Obtaining a reference",
+        heading: "The engineering landscape — sectors, tools and safety",
+        content: [
+          { type: "body", text: `Engineering is not one thing. It is a family of disciplines, each with its own tools, standards, culture and career pathway. Understanding which part of the landscape you are entering — and why — is the first step to making a credible application.\n\nThe major engineering sectors in Scotland and the UK:` },
+          { type: "infobox", heading: "Engineering sectors — what they do and where they recruit", rows: [
+            ["Aerospace & Defence", "Design, manufacture and maintenance of aircraft, weapons systems and space technology. Major Scottish employers: BAE Systems, Leonardo, Babcock (naval), Spirit AeroSystems. High precision, regulated environment, security clearance often required."],
+            ["Civil & Structural", "Design and construction of infrastructure — roads, bridges, buildings, tunnels, flood defences. Employers: Amey, AECOM, Jacobs, local councils. Mix of office, site and outdoor work."],
+            ["Electrical & Electronic", "Power generation, distribution, control systems, instrumentation. Employers: Scottish Power, SSE, National Grid, Siemens. Strong demand driven by energy transition and net zero targets."],
+            ["Mechanical & Manufacturing", "Design and production of machines, components and systems. Employers: Weir Group, Rolls-Royce, Howden, Wood Group. Emphasis on precision, quality and materials."],
+            ["Chemical & Process", "Petrochemicals, pharmaceuticals, food and drink production. Employers: Ineos, Diageo, GSK, Phibro. Analytical mindset, safety and compliance critical."],
+            ["Rail & Transport", "Track, signalling, rolling stock, electrification. Employers: Network Rail, Abellio, Alstom, Transport Scotland. Growing sector with significant investment."],
+            ["Renewables & Energy", "Wind, solar, hydro, hydrogen, offshore. Employers: Orsted, ScottishPower Renewables, Vattenfall. One of the fastest-growing sectors for apprentices in Scotland."],
+          ]},
+          { type: "body", text: `Engineering drawing and CAD basics — why they matter:\n\nEngineering drawings are the universal language of the industry. Whether you work in aerospace, civil or manufacturing, the ability to read and interpret a technical drawing is a fundamental expectation. CAD (Computer-Aided Design) software is how most modern engineering drawings are created and shared.\n\nYou do not need to be an expert before you start an apprenticeship — but knowing what these are and being able to talk about them shows sector awareness.\n\n• Engineering drawings show the exact dimensions, tolerances, materials and assembly requirements for a component or structure\n• A drawing uses standard symbols, views and annotations — a front view, side view and plan view are typical\n• CAD software used in industry includes AutoCAD (general), SolidWorks (mechanical), Revit (civil/structural) and CATIA (aerospace)\n• In your apprenticeship you will likely be trained on the specific software your employer uses\n• Mentioning awareness of CAD and technical drawings in your application or interview shows you have gone beyond surface-level research` },
+          { type: "body", text: `Workshop and site safety — what you need to know before day one:\n\nSafety in engineering is not an add-on. It is built into every task, every procedure and every environment. Understanding the basics before you arrive shows the right mindset.` },
+          { type: "infobox", heading: "Key safety frameworks in engineering workplaces", rows: [
+            ["PPE (Personal Protective Equipment)", "Safety glasses, hard hat, steel-capped boots, hi-vis vest, gloves, ear protection — required varies by task and environment. PPE is provided by employers but it is your responsibility to wear it correctly."],
+            ["COSHH (Control of Substances Hazardous to Health)", "Regulations governing how hazardous materials (chemicals, solvents, dust, fumes) are stored, handled and disposed of. As an apprentice you will be briefed on COSHH for every hazardous material you work with."],
+            ["Risk assessment", "Before starting any task, a risk assessment identifies hazards and sets out controls. You will learn to complete and follow risk assessments — and eventually write them."],
+            ["Machine safety", "Machines must be guarded, maintained and operated according to manufacturer instructions. Isolation procedures (lockout/tagout) ensure machines cannot be started while someone is working on them."],
+            ["Reporting near misses", "In a strong safety culture, near misses (incidents that could have caused harm but didn't) are reported and investigated. Reporting a near miss is valued — it prevents the next one."],
+            ["RIDDOR", "Reporting of Injuries, Diseases and Dangerous Occurrences Regulations — the legal framework for reporting serious workplace incidents to the HSE."],
+          ]},
+          { type: "prompt", heading: "Sector research task — complete before your next application", items: ["Which engineering sector am I targeting and why?", "What does a typical project or product in that sector look like?", "What safety frameworks are most relevant to that sector (PPE, COSHH, machine safety)?", "Is CAD or technical drawing mentioned in the job description? Which software?", "Can I name one recent development or challenge in that sector that I have read about?"] }
+        ]
+      },
+      {
+        heading: "Career & progression — where this apprenticeship can take you",
+        content: [
+          { type: "body", text: `One of the most powerful things you can say in an application or interview is that you understand not just the role, but where it leads. Most candidates apply for the apprenticeship. Fewer have thought about the career.\n\nA Modern Apprenticeship or Graduate Apprenticeship in engineering is not just a job. It is an entry point into a profession with globally recognised qualifications, clear progression pathways and genuine scope to go as far as your ability and ambition take you.` },
+          { type: "infobox", heading: "Engineering salary benchmarks — Scotland & UK (approximate, 2024–25)", rows: [
+            ["Apprentice (Year 1–2)", "£14,000 – £20,000 depending on employer and sector. Larger employers (BAE, Babcock, SSE) tend to pay at the higher end."],
+            ["Qualified engineer (Eng Tech level)", "£25,000 – £35,000. Typically achieved after completing the apprenticeship and gaining initial experience."],
+            ["Incorporated Engineer (IEng)", "£35,000 – £50,000. Mid-career professional with a recognised qualification and employer-endorsed competency."],
+            ["Chartered Engineer (CEng)", "£50,000 – £80,000+. The highest professional status in UK engineering. Internationally recognised."],
+            ["Senior / Principal Engineer", "£55,000 – £90,000+. Leadership roles, specialist disciplines, project management."],
+            ["Working away or abroad", "Many engineering roles attract allowances, per diems and enhanced pay for working away. Offshore, international contracts and defence roles frequently offer significant uplifts."],
+          ]},
+          { type: "body", text: `The route to Chartered Engineer (CEng) — why it matters:\n\nChartered Engineer status is awarded by a professional engineering institution and is recognised internationally. It is one of the most credible professional qualifications in the world.\n\nThe pathway from apprentice to CEng:\n1. Complete your apprenticeship and gain your vocational qualification (SVQ/HNC/HND/BEng)\n2. Register with a professional institution as an Engineering Technician (EngTech) or Associate Member\n3. Build a portfolio of competency evidence over several years of professional practice\n4. Apply for Incorporated Engineer (IEng) status once competencies are met\n5. Progress to Chartered Engineer (CEng) — the highest level\n\nThis process takes years, not weeks. But it starts on day one of your apprenticeship. Employers who support CEng progression are investing in you — and that is worth identifying at application stage.` },
+          { type: "infobox", heading: "Professional institutions — who they are and why you should know them", rows: [
+            ["IMechE — Institution of Mechanical Engineers", "Covers mechanical engineering in all its forms. One of the largest and most globally recognised engineering institutions. Supports EngTech, IEng and CEng registration."],
+            ["IET — Institution of Engineering and Technology", "Covers electrical, electronic, manufacturing and IT engineering. Strong presence in utilities, defence and digital infrastructure sectors."],
+            ["ICE — Institution of Civil Engineers", "Covers civil, structural and infrastructure engineering. Chartership is a standard expectation in major civil engineering employers."],
+            ["IChemE — Institution of Chemical Engineers", "Covers process, chemical and biochemical engineering. Relevant to oil & gas, renewables, food production and pharmaceuticals."],
+            ["CIBSE — Chartered Institution of Building Services Engineers", "Covers mechanical and electrical building services — heating, ventilation, lighting, energy systems."],
+            ["IMaEst — Institute of Marine Engineering, Science & Technology", "Relevant to maritime, offshore and naval engineering sectors."],
+          ]},
+          { type: "body", text: `Building your professional profile — starting now:\n\nYour professional profile is not something you build when you get your qualification. It starts with the way you present yourself in applications and interviews, and it grows throughout your career.\n\n• LinkedIn: Create a professional profile even as an apprentice. Document your training, projects and skills as you go. Employers and professional contacts use it constantly.\n• CPD (Continuing Professional Development): Keep a record of what you learn — courses, projects, new skills. Professional institutions require evidence of CPD for chartership.\n• Professional institution student membership: Most institutions offer free or low-cost student membership. It gives you access to journals, events and networks — and it signals commitment.\n• Mentoring: Many employers pair apprentices with senior engineers. Take it seriously. The relationship you build with a mentor can shape your entire career direction.\n\nUK engineering qualifications are internationally recognised. The UK's professional engineering standards are respected globally. A CEng from the UK is equivalent to the highest engineering credentials in most countries in the world. Engineering experience from UK employers — in defence, energy, infrastructure or advanced manufacturing — is sought after in North America, Australia, the Middle East, Europe and beyond.\n\nThis apprenticeship is not just a job in Scotland. It is, if you approach it the right way, a passport to work and opportunity around the world.` },
+          { type: "prompt", heading: "Progression planning — answer these before your interview", items: ["Which professional institution is most relevant to the sector I am entering?", "Does this employer have a structured pathway to IEng or CEng?", "What does this employer say about CPD and professional development?", "In five years, what level do I want to be operating at?", "Am I open to working away from home or abroad at some point in my career?"] }
+        ]
+      },
+      {
+        heading: "Obtaining a reference",
         content: [
           { type: "body", text: `Most engineering apprenticeship applications will ask you to provide a reference — or will request one if you progress to offer stage. A reference is a written statement from someone who can vouch for your reliability, character and ability to work. Engineering employers take references seriously.` },
           { type: "referenceTable" },
@@ -123,6 +174,26 @@ const MODULES = [
         content: [
           { type: "body", text: `Your CV must reflect who you actually are — not who you think an employer wants to see. The four profiles below cover the most common situations for engineering apprenticeship applicants. Find the one closest to your situation and use it as a framework.\n\nIn every case, the principle is the same: every skill must be evidenced, not just claimed. Generic statements are invisible. Specific, quantified, context-rich statements get read.` },
           { type: "cvProfiles" }
+        ]
+      },
+      {
+        heading: "Extracurricular activities, hobbies and interests — marketing yourself beyond the job",
+        content: [
+          { type: "body", text: `Many candidates leave this section of their CV blank, or fill it with vague statements like "I enjoy socialising and going to the gym." This is a missed opportunity.\n\nFor engineering apprenticeship applicants — especially school leavers and career changers who have limited formal work experience — extracurricular activities and hobbies can be the most powerful section of your application. They tell the employer what you are like when nobody is making you do something.\n\nThe principle is the same as for every other section: do not just list the activity. Extract the skill, the responsibility, the behaviour, and the result — and connect it explicitly to what an engineering employer values.` },
+          { type: "infobox", heading: "How to translate activities into engineering-relevant evidence", rows: [
+            ["Sport (team — football, rugby, basketball, hockey)", "Teamwork, communication, performing under pressure, resilience after setbacks, commitment to regular training. If you have a leadership role (captain, vice-captain): leadership, accountability."],
+            ["Sport (individual — running, cycling, swimming, climbing)", "Self-discipline, goal-setting, managing your own training and progress, persistence. Quantify: distances, times, events entered."],
+            ["Technical hobbies (electronics, robotics, 3D printing, coding, model engineering)", "Direct sector relevance. Describe what you built or made. Mention the tools, software or components you used. Show problem-solving and persistence when things went wrong."],
+            ["Gaming (especially strategy, simulation, engineering games)", "Problem-solving, logical thinking, strategic planning. Be selective — this works better for digital/IT contexts than traditional engineering, but simulation games (Cities: Skylines, Kerbal Space Program) can be made relevant."],
+            ["DIY, building, fixing things at home", "Practical skills, attention to detail, health and safety awareness, learning from mistakes. Describe a specific project — not just 'I help my dad with DIY'."],
+            ["Music (instrument, band, orchestra)", "Discipline, practice ethic, performing under pressure, teamwork (if ensemble), attention to detail in notation and timing."],
+            ["Volunteering (scouts, cadets, community, charity)", "Leadership, responsibility, working with diverse people, reliability. Duke of Edinburgh Award is specifically valuable — employers recognise it."],
+            ["Duke of Edinburgh Award", "Highly valued by engineering employers. Shows sustained commitment, physical challenge, voluntary service and a skill element. If you have it, lead with it."],
+            ["Young Enterprise / STEM clubs / school competitions", "Direct engineering and business relevance. Describe your specific role and contribution — not just that you participated."],
+          ]},
+          { type: "comparison", question: "Extracurricular section — weak vs strong", weak: "Hobbies and interests: I enjoy football, gaming and going to the gym. I also like fixing things.", strong: `Interests and activities:\n\nRobotics Club — St Andrews Academy (2022–present)\nMember of the school robotics team. Built and programmed a line-following robot for the regional STEM competition using Arduino. Took responsibility for the sensor calibration after we identified inconsistency in the testing results. Our team placed second in the regional heat.\n\nDuke of Edinburgh Award — Bronze (completed 2023)\nPhysical: Running — completed three 5k events. Voluntary: Assisted at local foodbank for 13 weeks. Skill: Guitar — practised and recorded a short piece for assessment.\n\nFootball — Linwood Community FC (2019–present)\nPlay in central midfield. Train twice weekly and play on Saturdays. Captain for the under-17 squad last season — responsible for pre-match warmups and communicating team strategy during games.` },
+          { type: "body", text: `When writing this section, ask yourself for each activity:\n\n• What did I actually do (not just attend)?\n• What was my specific role or contribution?\n• Did I take on any responsibility, lead anything, or improve at it over time?\n• Can I quantify anything — times, numbers, duration, results?\n• What skill does this demonstrate that an engineering employer would value?\n\nIf you can answer those questions, you have the material for a strong entry. If you cannot, the activity probably should not take up space on your CV.` },
+          { type: "prompt", heading: "Your extracurricular inventory — write your answers before drafting your CV", items: ["What activities have I done outside school or work in the last 2–3 years?", "For each one: what was my specific role and contribution?", "Did I improve at anything, complete something or take on responsibility?", "Can I quantify any of it (times, positions, events, hours)?", "Which of these is most relevant to an engineering employer and why?"] }
         ]
       },
       {
@@ -275,6 +346,22 @@ const MODULES = [
           { type: "body", text: `A proper system does not leave you at a dead end. If you are not yet competitive for direct entry, here are your realistic next moves.` },
           { type: "rerouteTable" },
           { type: "finalPrompt", items: ["If I am not ready now, my next best move is: ___", "I will review my progress again on this date: ___", "The one thing I will do differently in my next application is: ___", "The person I will ask to do a mock interview with me is: ___"] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 7,
+    icon: "✅",
+    title: "Knowledge Check",
+    subtitle: "Test your understanding before you apply",
+    color: T,
+    sections: [
+      {
+        heading: "Module sense check — are you ready?",
+        content: [
+          { type: "body", text: `This knowledge check covers the key principles from across the TASS Engineering module. It is not a test of recall — it is a test of whether you have understood the mindset, the behaviours and the standards expected of a competitive engineering apprenticeship candidate.\n\nWork through the questions honestly. If you get something wrong, go back to the relevant section before your next application.` },
+          { type: "quiz" }
         ]
       }
     ]
@@ -918,7 +1005,7 @@ function FinalPrompt({ items }) {
 
 // ─── Section dispatcher ───────────────────────────────────────────────────────
 
-function RenderContent({ content, mod }) {
+function RenderContent({ content, mod, setScreen }) {
   return content.map((item, i) => {
     switch (item.type) {
       case "body": return <Body key={i} text={item.text} color={mod.color} />;
@@ -945,6 +1032,16 @@ function RenderContent({ content, mod }) {
       case "cases": return <Cases key={i} cases={item.cases} />;
       case "rerouteTable": return <RerouteTable key={i} />;
       case "finalPrompt": return <FinalPrompt key={i} items={item.items} />;
+      case "quiz": return (
+        <div key={i} style={{ background: "#fff", border: `2px solid ${T}`, borderRadius: 14, padding: 20, marginTop: 8, textAlign: "center" }}>
+          <div style={{ fontSize: 40, marginBottom: 12 }}>✅</div>
+          <p style={{ color: N, fontWeight: 800, fontSize: 16, margin: "0 0 8px" }}>Ready to test yourself?</p>
+          <p style={{ color: "#555", fontSize: 14, lineHeight: 1.65, margin: "0 0 16px" }}>8 questions covering sector knowledge, behaviours, safety and the TASS approach. Takes about 5 minutes. Get 6 or more right and you're applying the right mindset.</p>
+          <button onClick={() => setScreen("quiz")} style={{ background: T, border: "none", color: "#fff", borderRadius: 10, padding: "12px 28px", fontWeight: 700, fontSize: 15, cursor: "pointer", fontFamily: "inherit" }}>
+            Start knowledge check →
+          </button>
+        </div>
+      );
       default: return null;
     }
   });
@@ -1168,7 +1265,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
         <div style={{ padding: "20px 16px", maxWidth: 720, margin: "0 auto" }}>
           <h2 style={{ color: N, fontSize: 19, fontWeight: 800, marginBottom: 4, lineHeight: 1.3 }}>{sec.heading}</h2>
           <div style={{ height: 3, width: 36, background: `linear-gradient(90deg, ${T}, #0D8B7D)`, borderRadius: 2, marginBottom: 18 }} />
-          <RenderContent content={sec.content} mod={mod} />
+          <RenderContent content={sec.content} mod={mod} setScreen={setScreen} />
           <div style={{ display: "flex", gap: 10, marginTop: 24 }}>
             {secIdx > 0 && <button onClick={() => setSecIdx(s => s-1)} style={{ flex: 1, padding: "12px", background: "#fff", border: `2px solid ${T}`, color: T, borderRadius: 10, fontWeight: 700, cursor: "pointer", fontSize: 14 }}>← Previous</button>}
             {secIdx < mod.sections.length - 1
