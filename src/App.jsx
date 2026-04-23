@@ -529,18 +529,16 @@ function PracticeQs({ qs, color }) {
                   );
                 })}
               </div>
+            ) : answered ? (
+              <div style={{ background: "#F0FDF4", borderRadius: 8, padding: 10, marginBottom: 8 }}>
+                <span style={{ color: G, fontWeight: 700, fontSize: 13 }}>Answer: </span>
+                <span style={{ color: "#14532D", fontSize: 13 }}>{pq.a}</span>
+              </div>
             ) : (
-              !answered ? (
-                <button onClick={() => setState(p => ({ ...p, [i]: { answered: 0 } }))}
-                  style={{ background: color, border: "none", color: "#fff", borderRadius: 8, padding: "7px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
-                  Reveal answer
-                </button>
-              ) : (
-                <div style={{ background: "#F0FDF4", borderRadius: 8, padding: 10, marginBottom: 8 }}>
-                  <span style={{ color: G, fontWeight: 700, fontSize: 13 }}>Answer: </span>
-                  <span style={{ color: "#14532D", fontSize: 13 }}>{pq.a}</span>
-                </div>
-              )
+              <button onClick={() => setState(p => ({ ...p, [i]: { answered: 0 } }))}
+                style={{ background: color, border: "none", color: "#fff", borderRadius: 8, padding: "7px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
+                Reveal answer
+              </button>
             )}
 
             {answered && (
