@@ -117,15 +117,6 @@ const MODULES = [
           { type: "body", text: `Building your professional profile — starting now:\n\nYour professional profile is not something you build when you get your qualification. It starts with the way you present yourself in applications and interviews, and it grows throughout your career.\n\n• LinkedIn: Create a professional profile even as an apprentice. Document your training, projects and skills as you go. Employers and professional contacts use it constantly.\n• CPD (Continuing Professional Development): Keep a record of what you learn — courses, projects, new skills. Professional institutions require evidence of CPD for chartership.\n• Professional institution student membership: Most institutions offer free or low-cost student membership. It gives you access to journals, events and networks — and it signals commitment.\n• Mentoring: Many employers pair apprentices with senior engineers. Take it seriously. The relationship you build with a mentor can shape your entire career direction.\n\nUK engineering qualifications are internationally recognised. The UK's professional engineering standards are respected globally. A CEng from the UK is equivalent to the highest engineering credentials in most countries in the world. Engineering experience from UK employers — in defence, energy, infrastructure or advanced manufacturing — is sought after in North America, Australia, the Middle East, Europe and beyond.\n\nThis apprenticeship is not just a job in Scotland. It is, if you approach it the right way, a passport to work and opportunity around the world.` },
           { type: "prompt", heading: "Progression planning — answer these before your interview", items: ["Which professional institution is most relevant to the sector I am entering?", "Does this employer have a structured pathway to IEng or CEng?", "What does this employer say about CPD and professional development?", "In five years, what level do I want to be operating at?", "Am I open to working away from home or abroad at some point in my career?"] }
         ]
-      },
-      {
-        heading: "Obtaining a reference",
-        content: [
-          { type: "body", text: `Most engineering apprenticeship applications will ask you to provide a reference — or will request one if you progress to offer stage. A reference is a written statement from someone who can vouch for your reliability, character and ability to work. Engineering employers take references seriously.` },
-          { type: "referenceTable" },
-          { type: "body", text: `How to approach asking for a reference:\n• Ask in person or by email — not by text message.\n• Give them advance notice — do not ask at the last minute.\n• Remind them of specific things you did that are relevant to engineering: attendance, project work, practical tasks, reliability.\n• Tell them what the role involves so they can tailor their reference appropriately.\n• Always thank them — and let them know the outcome of your application.` },
-          { type: "prompt", heading: "Reference preparation checklist", items: ["I have identified at least two people who could provide a reference", "I have asked them and they have agreed", "I have given them information about the role and what I would like them to highlight", "I have their correct contact details (email and phone) to provide on applications", "I have thanked them for agreeing to support me"] }
-        ]
       }
     ]
   },
@@ -206,6 +197,15 @@ const MODULES = [
           { type: "comparison", question: "Describe a time when you solved a problem.", weak: "I am good at solving problems. I stay calm under pressure and always find a solution.", strong: "During my HNC project, a component I had designed failed tolerance testing at the third iteration. Rather than guessing the fix, I went back to the original specification, mapped each measurement against the tolerance band, and identified that the error had compounded across two dimensions. I redesigned one dimension only, reran the test, and it passed. The lesson I took was that systematic diagnosis is faster than trial and error — and that matters in an engineering environment where materials and time are not free." }
         ]
       }
+      {
+        heading: "Obtaining a reference",
+        content: [
+          { type: "body", text: `Most engineering apprenticeship applications will ask you to provide a reference — or will request one if you progress to offer stage. A reference is a written statement from someone who can vouch for your reliability, character and ability to work. Engineering employers take references seriously.` },
+          { type: "referenceTable" },
+          { type: "body", text: `How to approach asking for a reference:\n• Ask in person or by email — not by text message.\n• Give them advance notice — do not ask at the last minute.\n• Remind them of specific things you did that are relevant to engineering: attendance, project work, practical tasks, reliability.\n• Tell them what the role involves so they can tailor their reference appropriately.\n• Always thank them — and let them know the outcome of your application.` },
+          { type: "prompt", heading: "Reference preparation checklist", items: ["I have identified at least two people who could provide a reference", "I have asked them and they have agreed", "I have given them information about the role and what I would like them to highlight", "I have their correct contact details (email and phone) to provide on applications", "I have thanked them for agreeing to support me"] }
+        ]
+      }
     ]
   },
   {
@@ -222,16 +222,16 @@ const MODULES = [
           { type: "callout", text: `Questions marked ★ use the production table below. Read the table carefully before attempting them — this is exactly what SHL and Cubiks tests require you to do.` },
           { type: "productionTable" },
           { type: "practiceQs", qs: [
-            { q: "★ Line A missed its weekly target. By how many units did it fall short?", a: "50 units short.", why: "Step 1 — sum Line A: 312 + 298 + 320 + 305 + 315 = 1,550. Step 2 — compare to target: 1,600 − 1,550 = 50. Two steps, both required. This is the standard SHL table-reading format." },
-            { q: "★ Which line achieved the highest percentage of its weekly target?", a: "Line B — 98.6% of target.", why: "Line A: 1,550 ÷ 1,600 = 96.9%. Line B: 1,380 ÷ 1,400 = 98.6%. Line C: 2,040 ÷ 2,100 = 97.1%. Line D: 900 ÷ 950 = 94.7%. Common mistake: assuming the line with the highest raw output wins. You must compare each line to its own target." },
-            { q: "★ On Wednesday, was the combined output across all four lines above or below the daily combined target of 1,200 units? By how much?", a: "Below target — Wednesday total was 1,195, missing by 5 units.", why: "Sum the Wednesday column: 320 + 265 + 420 + 190 = 1,195. Compare to 1,200. Easy to misread the column under time pressure — this is where candidates lose marks." },
-            { q: "★ If Line B increases its output by 12% every day next week, what will its Monday output be? Round to the nearest whole unit.", a: "308 units.", why: "275 × 1.12 = 308. Read the correct cell first (Line B, Monday = 275), then apply the percentage increase. Two steps, easy to multiply the wrong row." },
-            { q: "A quality inspector checks 3 batches. Batch 1: 240 units, 4 defective. Batch 2: 180 units, 6 defective. Batch 3: 300 units, 9 defective. Which batch has the highest defect rate?", a: "Batch 2 — defect rate 3.3%.", why: "Batch 1: 4 ÷ 240 = 1.67%. Batch 2: 6 ÷ 180 = 3.33%. Batch 3: 9 ÷ 300 = 3.0%. Three parallel calculations then a comparison. Batch 3 has more defects in total but a lower rate — a common source of error." },
-            { q: "A component must weigh between 1.45kg and 1.55kg. A batch of 5 components has a total weight of 7.6kg. Is it possible that all components are within tolerance?", a: "Not necessarily. The average is 1.52kg (within tolerance) but individual components could still be outside the range.", why: "Step 1: 7.6 ÷ 5 = 1.52kg average. Step 2: recognise that an average within tolerance does not guarantee each individual item is. This tests analytical reasoning — the type of question that separates strong candidates from the rest." },
-            { q: "A maintenance team completes 3 jobs taking 1h 45m, 2h 20m, and 55m. They have a 7.5-hour working day with a 30-minute unpaid break. How much working time remains?", a: "2 hours remaining.", why: "Step 1 — total job time: 1h45 + 2h20 + 55m = 5h00. Step 2 — available working time: 7.5h − 0.5h = 7h. Step 3 — remainder: 7h − 5h = 2h. Three steps with mixed time units — easy to lose track." },
-            { q: "Material costs £4.80 per metre. A job requires 3 lengths of 2.4m, 2 lengths of 1.75m, and 1 length of 0.9m. What is the total material cost?", a: "£55.68.", why: "Step 1 — total length: (3 × 2.4) + (2 × 1.75) + 0.9 = 7.2 + 3.5 + 0.9 = 11.6m. Step 2 — cost: 11.6 × £4.80 = £55.68. Common mistake: multiplying each length separately and losing accuracy." },
-            { q: "A machine runs at 85% efficiency. At full capacity it produces 400 units per hour. How many units does it produce in a 7.5-hour shift at its actual efficiency?", a: "2,550 units.", why: "Step 1 — actual rate: 400 × 0.85 = 340 units/hour. Step 2 — shift output: 340 × 7.5 = 2,550. Applying efficiency as a multiplier before calculating volume — a standard format in manufacturing contexts." },
-            { q: "Engineer A checks 1 component every 4 minutes. Engineer B checks 1 every 6 minutes. Working simultaneously, how many components do they check together in a 2-hour period?", a: "50 components.", why: "Step 1 — convert: 2 hours = 120 minutes. Step 2 — A's output: 120 ÷ 4 = 30. Step 3 — B's output: 120 ÷ 6 = 20. Step 4 — combined: 30 + 20 = 50. Four steps. Most candidates who get this wrong forget to convert hours to minutes first." }
+            { q: "★ Line A missed its weekly target. By how many units did it fall short?", a: "50 units short.", opts: ["25 units short.", "50 units short.", "75 units short.", "Line A met its target."], why: "Step 1 — sum Line A: 312 + 298 + 320 + 305 + 315 = 1,550. Step 2 — compare to target: 1,600 − 1,550 = 50. Two steps, both required. This is the standard SHL table-reading format." },
+            { q: "★ Which line achieved the highest percentage of its weekly target?", a: "Line B — 98.6% of target.", opts: ["Line A — 96.9%", "Line B — 98.6%", "Line C — 97.1%", "Line D — 94.7%"], why: "Line A: 1,550 ÷ 1,600 = 96.9%. Line B: 1,380 ÷ 1,400 = 98.6%. Line C: 2,040 ÷ 2,100 = 97.1%. Line D: 900 ÷ 950 = 94.7%. Common mistake: assuming the line with the highest raw output wins. You must compare each line to its own target." },
+            { q: "★ On Wednesday, was the combined output across all four lines above or below the daily combined target of 1,200 units? By how much?", a: "Below target — Wednesday total was 1,195, missing by 5 units.", opts: ["Above by 5 units", "Below by 5 units", "Below by 25 units", "Exactly on target"], why: "Sum the Wednesday column: 320 + 265 + 420 + 190 = 1,195. Compare to 1,200. Easy to misread the column under time pressure — this is where candidates lose marks." },
+            { q: "★ If Line B increases its output by 12% every day next week, what will its Monday output be? Round to the nearest whole unit.", a: "308 units.", opts: ["275 units", "287 units", "308 units", "330 units"], why: "275 × 1.12 = 308. Read the correct cell first (Line B, Monday = 275), then apply the percentage increase. Two steps, easy to multiply the wrong row." },
+            { q: "A quality inspector checks 3 batches. Batch 1: 240 units, 4 defective. Batch 2: 180 units, 6 defective. Batch 3: 300 units, 9 defective. Which batch has the highest defect rate?", a: "Batch 2 — defect rate 3.3%.", opts: ["Batch 1 — 1.67%", "Batch 2 — 3.33%", "Batch 3 — 3.0%", "Batch 3 — it has the most defects"], why: "Batch 1: 4 ÷ 240 = 1.67%. Batch 2: 6 ÷ 180 = 3.33%. Batch 3: 9 ÷ 300 = 3.0%. Three parallel calculations then a comparison. Batch 3 has more defects in total but a lower rate — a common source of error." },
+            { q: "A component must weigh between 1.45kg and 1.55kg. A batch of 5 components has a total weight of 7.6kg. Is it possible that all components are within tolerance?", a: "Not necessarily. The average is 1.52kg (within tolerance) but individual components could still be outside the range.", opts: ["Yes — the average is within tolerance so all are fine", "No — 7.6kg divided by 5 is outside the range", "Not necessarily — the average is within tolerance but individuals could still be outside it", "Yes — 1.52kg is the midpoint of the tolerance band"], why: "Step 1: 7.6 ÷ 5 = 1.52kg average. Step 2: recognise that an average within tolerance does not guarantee each individual item is. This tests analytical reasoning — the type of question that separates strong candidates from the rest." },
+            { q: "A maintenance team completes 3 jobs taking 1h 45m, 2h 20m, and 55m. They have a 7.5-hour working day with a 30-minute unpaid break. How much working time remains?", a: "2 hours remaining.", opts: ["1 hour 30 minutes", "2 hours", "2 hours 30 minutes", "3 hours"], why: "Step 1 — total job time: 1h45 + 2h20 + 55m = 5h00. Step 2 — available working time: 7.5h − 0.5h = 7h. Step 3 — remainder: 7h − 5h = 2h. Three steps with mixed time units — easy to lose track." },
+            { q: "Material costs £4.80 per metre. A job requires 3 lengths of 2.4m, 2 lengths of 1.75m, and 1 length of 0.9m. What is the total material cost?", a: "£55.68.", opts: ["£48.00", "£52.80", "£55.68", "£60.48"], why: "Step 1 — total length: (3 × 2.4) + (2 × 1.75) + 0.9 = 7.2 + 3.5 + 0.9 = 11.6m. Step 2 — cost: 11.6 × £4.80 = £55.68. Common mistake: multiplying each length separately and losing accuracy." },
+            { q: "A machine runs at 85% efficiency. At full capacity it produces 400 units per hour. How many units does it produce in a 7.5-hour shift at its actual efficiency?", a: "2,550 units.", opts: ["2,250 units", "2,400 units", "2,550 units", "3,000 units"], why: "Step 1 — actual rate: 400 × 0.85 = 340 units/hour. Step 2 — shift output: 340 × 7.5 = 2,550. Applying efficiency as a multiplier before calculating volume — a standard format in manufacturing contexts." },
+            { q: "Engineer A checks 1 component every 4 minutes. Engineer B checks 1 every 6 minutes. Working simultaneously, how many components do they check together in a 2-hour period?", a: "50 components.", opts: ["30 components", "40 components", "50 components", "60 components"], why: "Step 1 — convert: 2 hours = 120 minutes. Step 2 — A's output: 120 ÷ 4 = 30. Step 3 — B's output: 120 ÷ 6 = 20. Step 4 — combined: 30 + 20 = 50. Four steps. Most candidates who get this wrong forget to convert hours to minutes first." }
           ]}
         ]
       },
@@ -251,11 +251,11 @@ const MODULES = [
         content: [
           { type: "body", text: `Where used, these tests assess simple physical logic — gears, levers, pulleys, forces, direction of movement. You do not need A-level physics. You need to understand the principles.` },
           { type: "practiceQs", qs: [
-            { q: "If gear A turns clockwise, which direction does a directly connected gear B turn?", a: "Anti-clockwise.", why: "Principle: Meshed gears always turn in opposite directions." },
-            { q: "If a longer lever arm is used with the same applied force, what happens to the turning effect?", a: "It increases.", why: "Principle: Turning effect (moment) = force × distance. Longer arm = greater moment." },
-            { q: "A simple open belt connects two pulleys. If the driving pulley turns clockwise, which direction does the driven pulley turn?", a: "Clockwise (same direction).", why: "Principle: An open belt transfers motion in the same direction. A crossed belt reverses it." },
-            { q: "Gear A has 10 teeth, gear B has 20 teeth. If gear A completes 4 full rotations, how many rotations does gear B complete?", a: "2 rotations.", why: "Principle: Ratio is 10:20 = 1:2. Gear B turns half as many times as gear A." },
-            { q: "A load hangs from a pulley system with two supporting rope sections. What is the mechanical advantage?", a: "2.", why: "Principle: Two rope sections support the load, so the effort needed is halved." }
+            { q: "If gear A turns clockwise, which direction does a directly connected gear B turn?", a: "Anti-clockwise.", opts: ["Clockwise", "Anti-clockwise", "The same direction as gear A", "It depends on the size of the gears"], why: "Principle: Meshed gears always turn in opposite directions." },
+            { q: "If a longer lever arm is used with the same applied force, what happens to the turning effect?", a: "It increases.", opts: ["It decreases", "It stays the same", "It increases", "It depends on the fulcrum position"], why: "Principle: Turning effect (moment) = force × distance. Longer arm = greater moment." },
+            { q: "A simple open belt connects two pulleys. If the driving pulley turns clockwise, which direction does the driven pulley turn?", a: "Clockwise (same direction).", opts: ["Anti-clockwise", "Clockwise (same direction)", "It stops moving", "It alternates direction"], why: "Principle: An open belt transfers motion in the same direction. A crossed belt reverses it." },
+            { q: "Gear A has 10 teeth, gear B has 20 teeth. If gear A completes 4 full rotations, how many rotations does gear B complete?", a: "2 rotations.", opts: ["1 rotation", "2 rotations", "4 rotations", "8 rotations"], why: "Principle: Ratio is 10:20 = 1:2. Gear B turns half as many times as gear A." },
+            { q: "A load hangs from a pulley system with two supporting rope sections. What is the mechanical advantage?", a: "2.", opts: ["1", "2", "3", "4"], why: "Principle: Two rope sections support the load, so the effort needed is halved." }
           ]},
           { type: "prepRoutine" }
         ]
@@ -491,30 +491,70 @@ function ProductionTable() {
 }
 
 function PracticeQs({ qs, color }) {
-  const [revealed, setReveal] = useState({});
+  const [state, setState] = useState({});
+
+  function handleAnswer(i, optIdx) {
+    if (state[i]?.answered !== undefined) return;
+    setState(p => ({ ...p, [i]: { answered: optIdx } }));
+  }
+
   return (
     <div style={{ marginBottom: 18 }}>
       {qs.map((pq, i) => {
         const usesTable = pq.q.startsWith("★");
+        const s = state[i] || {};
+        const answered = s.answered !== undefined;
+        const correctIdx = pq.opts ? pq.opts.indexOf(pq.a) : -1;
+
         return (
-          <div key={i} style={{ background: "#F8FAFC", border: `1px solid ${usesTable ? "`${T}30`" : "#E2E8F0"}`, borderLeft: `4px solid ${usesTable ? T : "#E2E8F0"}`, borderRadius: 12, padding: 16, marginBottom: 10 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 10 }}>
-              <p style={{ color: N, fontWeight: 600, fontSize: 14, lineHeight: 1.5, margin: 0, flex: 1 }}>{pq.q}</p>
-              {usesTable && <span style={{ background: "`${T}15`", color: T, border: "1px solid `${T}40`", borderRadius: 99, padding: "2px 9px", fontSize: 11, fontWeight: 700, flexShrink: 0 }}>Uses table</span>}
+          <div key={i} style={{ background: "#F8FAFC", border: `1px solid ${usesTable ? T + "40" : "#E2E8F0"}`, borderLeft: `4px solid ${usesTable ? T : "#CBD5E0"}`, borderRadius: 12, padding: 16, marginBottom: 12 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 12 }}>
+              <p style={{ color: N, fontWeight: 700, fontSize: 14, lineHeight: 1.55, margin: 0, flex: 1 }}>{pq.q}</p>
+              {usesTable && <span style={{ background: T + "15", color: T, border: `1px solid ${T}40`, borderRadius: 99, padding: "2px 9px", fontSize: 11, fontWeight: 700, flexShrink: 0 }}>Uses table</span>}
             </div>
-            {revealed[i] ? (
-              <div>
+
+            {pq.opts ? (
+              <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                {pq.opts.map((opt, j) => {
+                  let bg = "#fff", border = "1.5px solid #E2E8F0", col = "#2D3748";
+                  if (answered) {
+                    if (j === correctIdx) { bg = "#F0FDF4"; border = "1.5px solid #10B981"; col = "#065F46"; }
+                    else if (j === s.answered) { bg = "#FEF2F2"; border = "1.5px solid #EF4444"; col = "#991B1B"; }
+                  }
+                  return (
+                    <button key={j} onClick={() => handleAnswer(i, j)}
+                      style={{ background: bg, border, color: col, borderRadius: 9, padding: "10px 13px", textAlign: "left", cursor: answered ? "default" : "pointer", fontSize: 13, fontWeight: answered && j === correctIdx ? 700 : 400, fontFamily: "inherit", transition: "all 0.15s" }}>
+                      <span style={{ fontWeight: 700, marginRight: 8, color: answered ? col : "#999" }}>{String.fromCharCode(65 + j)}.</span>{opt}
+                    </button>
+                  );
+                })}
+              </div>
+            ) : (
+              // Fallback for questions without opts — show reveal button
+              !answered ? (
+                <button onClick={() => setState(p => ({ ...p, [i]: { answered: 0 } }))}
+                  style={{ background: color, border: "none", color: "#fff", borderRadius: 8, padding: "7px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
+                  Reveal answer
+                </button>
+              ) : (
                 <div style={{ background: "#F0FDF4", borderRadius: 8, padding: 10, marginBottom: 8 }}>
                   <span style={{ color: G, fontWeight: 700, fontSize: 13 }}>Answer: </span>
                   <span style={{ color: "#14532D", fontSize: 13 }}>{pq.a}</span>
                 </div>
-                <p style={{ color: "#777", fontSize: 12, lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>💡 {pq.why}</p>
+              )
+            )}
+
+            {answered && (
+              <div style={{ marginTop: 10 }}>
+                {pq.opts && (
+                  <div style={{ background: s.answered === correctIdx ? "#F0FDF4" : "#FEF2F2", border: `1px solid ${s.answered === correctIdx ? "#10B981" : "#EF4444"}`, borderRadius: 8, padding: "9px 12px", marginBottom: 8 }}>
+                    <p style={{ color: s.answered === correctIdx ? G : R, fontWeight: 700, fontSize: 12, margin: "0 0 2px" }}>
+                      {s.answered === correctIdx ? "✅ Correct" : `✗ Incorrect — the answer is ${pq.a}`}
+                    </p>
+                  </div>
+                )}
+                <p style={{ color: "#666", fontSize: 12, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>💡 {pq.why}</p>
               </div>
-            ) : (
-              <button onClick={() => setReveal(p => ({ ...p, [i]: true }))}
-                style={{ background: color, border: "none", color: "#fff", borderRadius: 8, padding: "7px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer" }}>
-                Reveal answer
-              </button>
             )}
           </div>
         );
@@ -522,6 +562,7 @@ function PracticeQs({ qs, color }) {
     </div>
   );
 }
+
 
 function InfoBox({ heading, rows, color }) {
   return (
@@ -1293,21 +1334,13 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
       </div>
 
       <div style={{ padding: "16px 16px 0" }}>
-        <button onClick={() => setScreen("ai")} style={{ width: "100%", background: `linear-gradient(135deg, ${T}, #0D8B7D)`, border: "none", borderRadius: 14, padding: "16px 18px", display: "flex", alignItems: "center", gap: 14, cursor: "pointer", boxShadow: `0 4px 20px ${T}40`, marginBottom: 10 }}>
+        <button onClick={() => setScreen("ai")} style={{ width: "100%", background: `linear-gradient(135deg, ${T}, #0D8B7D)`, border: "none", borderRadius: 14, padding: "16px 18px", display: "flex", alignItems: "center", gap: 14, cursor: "pointer", boxShadow: `0 4px 20px ${T}40`, marginBottom: 20 }}>
           <div style={{ width: 44, height: 44, background: "rgba(255,255,255,0.2)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>⚙️</div>
           <div style={{ textAlign: "left" }}>
             <div style={{ color: "#fff", fontWeight: 800, fontSize: 16 }}>TASS Engineering Coach</div>
             <div style={{ color: "rgba(255,255,255,0.8)", fontSize: 12 }}>Mock interviews · STAR answers · Test practice · CV help</div>
           </div>
           <div style={{ marginLeft: "auto", color: "rgba(255,255,255,0.6)", fontSize: 20 }}>→</div>
-        </button>
-        <button onClick={() => setScreen("quiz")} style={{ width: "100%", background: N, border: "none", borderRadius: 14, padding: "14px 18px", display: "flex", alignItems: "center", gap: 14, cursor: "pointer", marginBottom: 20 }}>
-          <div style={{ width: 44, height: 44, background: A + "25", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>🧮</div>
-          <div style={{ textAlign: "left" }}>
-            <div style={{ color: "#fff", fontWeight: 800, fontSize: 15 }}>Knowledge Check</div>
-            <div style={{ color: "rgba(255,255,255,0.65)", fontSize: 12 }}>8 questions drawn from the module content</div>
-          </div>
-          <div style={{ marginLeft: "auto", color: A, fontWeight: 700, fontSize: 13 }}>Start →</div>
         </button>
       </div>
 
