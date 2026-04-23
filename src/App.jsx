@@ -530,7 +530,6 @@ function PracticeQs({ qs, color }) {
                 })}
               </div>
             ) : (
-              // Fallback for questions without opts — show reveal button
               !answered ? (
                 <button onClick={() => setState(p => ({ ...p, [i]: { answered: 0 } }))}
                   style={{ background: color, border: "none", color: "#fff", borderRadius: 8, padding: "7px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
