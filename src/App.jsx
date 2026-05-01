@@ -1165,7 +1165,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
   if (screen === "quiz") {
     const qData = QUIZ[quiz.q];
     return (
-      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh" }}>
+      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh" }}>
         <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } @keyframes b{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}} button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
         <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "14px 20px", display: "flex", alignItems: "center", gap: 12 }}>
           <button onClick={() => { setScreen("home"); setQuiz({ q: 0, score: 0, answered: null, done: false }); }}
@@ -1174,7 +1174,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
           <TASSLogo size="sm" theme="dark" />
           <div style={{ marginLeft: "auto", color: T, fontWeight: 800, fontSize: 16 }}>{quiz.score}/{QUIZ.length}</div>
         </div>
-        <div style={{ padding: "20px 16px", maxWidth: 600, margin: "0 auto" }}>
+        <div style={{ padding: "20px 16px", maxWidth: 640, margin: "0 auto" }}>
           {quiz.done ? (
             <div style={{ background: "#fff", borderRadius: 16, padding: 32, textAlign: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}>
               <div style={{ fontSize: 52, marginBottom: 16 }}>{quiz.score >= 6 ? "🏆" : quiz.score >= 4 ? "💪" : "📚"}</div>
@@ -1234,7 +1234,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
   // ── AI Coach ──
   if (screen === "ai") {
     return (
-      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } @keyframes b{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}} button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
         <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "14px 20px", display: "flex", alignItems: "center", gap: 12 }}>
           <button onClick={() => setScreen("home")} style={{ background: "rgba(255,255,255,0.15)", border: "none", color: "#fff", borderRadius: 8, padding: "6px 12px", cursor: "pointer", fontSize: 14 }}>← Back</button>
@@ -1283,7 +1283,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
     const mod = MODULES[modIdx];
     const sec = mod.sections[secIdx];
     return (
-      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh" }}>
+      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh" }}>
         <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } button:focus, input:focus, textarea:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
         <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "14px 20px", display: "flex", alignItems: "center", gap: 12 }}>
           <button onClick={() => { setScreen("home"); setSecIdx(0); }} style={{ background: "rgba(255,255,255,0.15)", border: "none", color: "#fff", borderRadius: 8, padding: "6px 12px", cursor: "pointer", fontSize: 14 }}>← Back</button>
@@ -1300,7 +1300,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
             </button>
           ))}
         </div>
-        <div style={{ padding: "20px 16px", maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ padding: "20px 16px", maxWidth: 640, margin: "0 auto" }}>
           <h2 style={{ color: N, fontSize: 19, fontWeight: 800, marginBottom: 4, lineHeight: 1.3 }}>{sec.heading}</h2>
           <div style={{ height: 3, width: 36, background: `linear-gradient(90deg, ${T}, #0D8B7D)`, borderRadius: 2, marginBottom: 18 }} />
           <RenderContent content={sec.content} mod={mod} setScreen={setScreen} />
@@ -1317,20 +1317,20 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
 
   // ── Home ──
   return (
-    <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh" }}>
-      <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
-      <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "28px 20px 32px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: -50, right: -30, width: 180, height: 180, borderRadius: "50%", background: "rgba(26,158,143,0.08)" }} />
-        <div style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 16 }}>
+    <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh" }}>
+      <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F0F4F8; } ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; } button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
+      <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "12px 16px", position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
+        <div style={{ maxWidth: 640, margin: "0 auto", display: "flex", alignItems: "center", gap: 12 }}>
           <TASSLogo size="sm" theme="dark" />
-          <div>
-            <h1 style={{ color: "#fff", fontSize: 22, fontWeight: 900, lineHeight: 1.2, margin: "0 0 6px" }}>Engineering & Manufacturing</h1>
-            <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, lineHeight: 1.65, margin: 0 }}>Full-depth sector module · Decision, Preparation, Execution</p>
+          <div style={{ width: 1, height: 32, background: "rgba(255,255,255,0.15)", margin: "0 4px" }} />
+          <div style={{ flex: 1 }}>
+            <div style={{ color: "rgba(255,255,255,0.6)", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 }}>Engineering & Manufacturing</div>
+            <div style={{ color: "#fff", fontSize: 13, fontWeight: 700, marginTop: 2 }}>Full-depth sector module</div>
           </div>
         </div>
       </div>
 
-      <div style={{ padding: "16px 16px 0" }}>
+      <div style={{ maxWidth: 640, margin: "0 auto", padding: "20px 16px 28px" }}>
         <button onClick={() => setScreen("ai")} style={{ width: "100%", background: `linear-gradient(135deg, ${T}, #0D8B7D)`, border: "none", borderRadius: 14, padding: "16px 18px", display: "flex", alignItems: "center", gap: 14, cursor: "pointer", boxShadow: `0 4px 20px ${T}40`, marginBottom: 20 }}>
           <div style={{ width: 44, height: 44, background: "rgba(255,255,255,0.2)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>⚙️</div>
           <div style={{ textAlign: "left" }}>
@@ -1339,14 +1339,12 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
           </div>
           <div style={{ marginLeft: "auto", color: "rgba(255,255,255,0.6)", fontSize: 20 }}>→</div>
         </button>
-      </div>
 
-      <div style={{ padding: "0 16px 28px" }}>
         <div style={{ fontSize: 11, color: "#999", fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, marginBottom: 12 }}>Module content</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {MODULES.map((mod, i) => (
             <button key={mod.id} onClick={() => { setModIdx(i); setSecIdx(0); setScreen("module"); }}
-              style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 12, cursor: "pointer", boxShadow: "0 2px 8px rgba(0,0,0,0.04)", textAlign: "left" }}>
+              style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 12, cursor: "pointer", boxShadow: "0 1px 4px rgba(0,0,0,0.04)", textAlign: "left" }}>
               <div style={{ width: 46, height: 46, background: T + "18", borderRadius: 11, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>{mod.icon}</div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 10, color: T, fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 2 }}>Section {mod.id}</div>
@@ -1357,10 +1355,10 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
             </button>
           ))}
         </div>
-      </div>
 
-      <div style={{ textAlign: "center", padding: "4px 20px 28px", color: "#bbb", fontSize: 11 }}>
-        <strong style={{ color: T }}>The Apprenticeship Success System™</strong> · Engineering & Manufacturing · tass.scot
+        <div style={{ textAlign: "center", padding: "24px 0 8px", color: "#bbb", fontSize: 11 }}>
+          <strong style={{ color: T }}>The Apprenticeship Success System™</strong> · Engineering & Manufacturing · tass.scot
+        </div>
       </div>
     </div>
   );
