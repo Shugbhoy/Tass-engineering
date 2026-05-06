@@ -68,54 +68,12 @@ const MODULES = [
         ]
       },
       {
-        heading: "The engineering landscape — sectors, tools and safety",
+        heading: "3.1 Obtaining a reference",
         content: [
-          { type: "body", text: `Engineering is not one thing. It is a family of disciplines, each with its own tools, standards, culture and career pathway. Understanding which part of the landscape you are entering — and why — is the first step to making a credible application.\n\nThe major engineering sectors in Scotland and the UK:` },
-          { type: "infobox", heading: "Engineering sectors — what they do and where they recruit", rows: [
-            ["Aerospace & Defence", "Design, manufacture and maintenance of aircraft, weapons systems and space technology. Major Scottish employers: BAE Systems, Leonardo, Babcock (naval), Spirit AeroSystems. High precision, regulated environment, security clearance often required."],
-            ["Civil & Structural", "Design and construction of infrastructure — roads, bridges, buildings, tunnels, flood defences. Employers: Amey, AECOM, Jacobs, local councils. Mix of office, site and outdoor work."],
-            ["Electrical & Electronic", "Power generation, distribution, control systems, instrumentation. Employers: Scottish Power, SSE, National Grid, Siemens. Strong demand driven by energy transition and net zero targets."],
-            ["Mechanical & Manufacturing", "Design and production of machines, components and systems. Employers: Weir Group, Rolls-Royce, Howden, Wood Group. Emphasis on precision, quality and materials."],
-            ["Chemical & Process", "Petrochemicals, pharmaceuticals, food and drink production. Employers: Ineos, Diageo, GSK, Phibro. Analytical mindset, safety and compliance critical."],
-            ["Rail & Transport", "Track, signalling, rolling stock, electrification. Employers: Network Rail, Abellio, Alstom, Transport Scotland. Growing sector with significant investment."],
-            ["Renewables & Energy", "Wind, solar, hydro, hydrogen, offshore. Employers: Orsted, ScottishPower Renewables, Vattenfall. One of the fastest-growing sectors for apprentices in Scotland."],
-          ]},
-          { type: "body", text: `Engineering drawing and CAD basics — why they matter:\n\nEngineering drawings are the universal language of the industry. Whether you work in aerospace, civil or manufacturing, the ability to read and interpret a technical drawing is a fundamental expectation. CAD (Computer-Aided Design) software is how most modern engineering drawings are created and shared.\n\nYou do not need to be an expert before you start an apprenticeship — but knowing what these are and being able to talk about them shows sector awareness.\n\n• Engineering drawings show the exact dimensions, tolerances, materials and assembly requirements for a component or structure\n• A drawing uses standard symbols, views and annotations — a front view, side view and plan view are typical\n• CAD software used in industry includes AutoCAD (general), SolidWorks (mechanical), Revit (civil/structural) and CATIA (aerospace)\n• In your apprenticeship you will likely be trained on the specific software your employer uses\n• Mentioning awareness of CAD and technical drawings in your application or interview shows you have gone beyond surface-level research` },
-          { type: "body", text: `Workshop and site safety — what you need to know before day one:\n\nSafety in engineering is not an add-on. It is built into every task, every procedure and every environment. Understanding the basics before you arrive shows the right mindset.` },
-          { type: "infobox", heading: "Key safety frameworks in engineering workplaces", rows: [
-            ["PPE (Personal Protective Equipment)", "Safety glasses, hard hat, steel-capped boots, hi-vis vest, gloves, ear protection — required varies by task and environment. PPE is provided by employers but it is your responsibility to wear it correctly."],
-            ["COSHH (Control of Substances Hazardous to Health)", "Regulations governing how hazardous materials (chemicals, solvents, dust, fumes) are stored, handled and disposed of. As an apprentice you will be briefed on COSHH for every hazardous material you work with."],
-            ["Risk assessment", "Before starting any task, a risk assessment identifies hazards and sets out controls. You will learn to complete and follow risk assessments — and eventually write them."],
-            ["Machine safety", "Machines must be guarded, maintained and operated according to manufacturer instructions. Isolation procedures (lockout/tagout) ensure machines cannot be started while someone is working on them."],
-            ["Reporting near misses", "In a strong safety culture, near misses (incidents that could have caused harm but didn't) are reported and investigated. Reporting a near miss is valued — it prevents the next one."],
-            ["RIDDOR", "Reporting of Injuries, Diseases and Dangerous Occurrences Regulations — the legal framework for reporting serious workplace incidents to the HSE."],
-          ]},
-          { type: "prompt", heading: "Sector research task — complete before your next application", items: ["Which engineering sector am I targeting and why?", "What does a typical project or product in that sector look like?", "What safety frameworks are most relevant to that sector (PPE, COSHH, machine safety)?", "Is CAD or technical drawing mentioned in the job description? Which software?", "Can I name one recent development or challenge in that sector that I have read about?"] }
-        ]
-      },
-      {
-        heading: "Career & progression — where this apprenticeship can take you",
-        content: [
-          { type: "body", text: `One of the most powerful things you can say in an application or interview is that you understand not just the role, but where it leads. Most candidates apply for the apprenticeship. Fewer have thought about the career.\n\nA Modern Apprenticeship or Graduate Apprenticeship in engineering is not just a job. It is an entry point into a profession with globally recognised qualifications, clear progression pathways and genuine scope to go as far as your ability and ambition take you.` },
-          { type: "infobox", heading: "Engineering salary benchmarks — Scotland & UK (approximate, 2024–25)", rows: [
-            ["Apprentice (Year 1–2)", "£14,000 – £20,000 depending on employer and sector. Larger employers (BAE, Babcock, SSE) tend to pay at the higher end."],
-            ["Qualified engineer (Eng Tech level)", "£25,000 – £35,000. Typically achieved after completing the apprenticeship and gaining initial experience."],
-            ["Incorporated Engineer (IEng)", "£35,000 – £50,000. Mid-career professional with a recognised qualification and employer-endorsed competency."],
-            ["Chartered Engineer (CEng)", "£50,000 – £80,000+. The highest professional status in UK engineering. Internationally recognised."],
-            ["Senior / Principal Engineer", "£55,000 – £90,000+. Leadership roles, specialist disciplines, project management."],
-            ["Working away or abroad", "Many engineering roles attract allowances, per diems and enhanced pay for working away. Offshore, international contracts and defence roles frequently offer significant uplifts."],
-          ]},
-          { type: "body", text: `The route to Chartered Engineer (CEng) — why it matters:\n\nChartered Engineer status is awarded by a professional engineering institution and is recognised internationally. It is one of the most credible professional qualifications in the world.\n\nThe pathway from apprentice to CEng:\n1. Complete your apprenticeship and gain your vocational qualification (SVQ/HNC/HND/BEng)\n2. Register with a professional institution as an Engineering Technician (EngTech) or Associate Member\n3. Build a portfolio of competency evidence over several years of professional practice\n4. Apply for Incorporated Engineer (IEng) status once competencies are met\n5. Progress to Chartered Engineer (CEng) — the highest level\n\nThis process takes years, not weeks. But it starts on day one of your apprenticeship. Employers who support CEng progression are investing in you — and that is worth identifying at application stage.` },
-          { type: "infobox", heading: "Professional institutions — who they are and why you should know them", rows: [
-            ["IMechE — Institution of Mechanical Engineers", "Covers mechanical engineering in all its forms. One of the largest and most globally recognised engineering institutions. Supports EngTech, IEng and CEng registration."],
-            ["IET — Institution of Engineering and Technology", "Covers electrical, electronic, manufacturing and IT engineering. Strong presence in utilities, defence and digital infrastructure sectors."],
-            ["ICE — Institution of Civil Engineers", "Covers civil, structural and infrastructure engineering. Chartership is a standard expectation in major civil engineering employers."],
-            ["IChemE — Institution of Chemical Engineers", "Covers process, chemical and biochemical engineering. Relevant to oil & gas, renewables, food production and pharmaceuticals."],
-            ["CIBSE — Chartered Institution of Building Services Engineers", "Covers mechanical and electrical building services — heating, ventilation, lighting, energy systems."],
-            ["IMaEst — Institute of Marine Engineering, Science & Technology", "Relevant to maritime, offshore and naval engineering sectors."],
-          ]},
-          { type: "body", text: `Building your professional profile — starting now:\n\nYour professional profile is not something you build when you get your qualification. It starts with the way you present yourself in applications and interviews, and it grows throughout your career.\n\n• LinkedIn: Create a professional profile even as an apprentice. Document your training, projects and skills as you go. Employers and professional contacts use it constantly.\n• CPD (Continuing Professional Development): Keep a record of what you learn — courses, projects, new skills. Professional institutions require evidence of CPD for chartership.\n• Professional institution student membership: Most institutions offer free or low-cost student membership. It gives you access to journals, events and networks — and it signals commitment.\n• Mentoring: Many employers pair apprentices with senior engineers. Take it seriously. The relationship you build with a mentor can shape your entire career direction.\n\nUK engineering qualifications are internationally recognised. The UK's professional engineering standards are respected globally. A CEng from the UK is equivalent to the highest engineering credentials in most countries in the world. Engineering experience from UK employers — in defence, energy, infrastructure or advanced manufacturing — is sought after in North America, Australia, the Middle East, Europe and beyond.\n\nThis apprenticeship is not just a job in Scotland. It is, if you approach it the right way, a passport to work and opportunity around the world.` },
-          { type: "prompt", heading: "Progression planning — answer these before your interview", items: ["Which professional institution is most relevant to the sector I am entering?", "Does this employer have a structured pathway to IEng or CEng?", "What does this employer say about CPD and professional development?", "In five years, what level do I want to be operating at?", "Am I open to working away from home or abroad at some point in my career?"] }
+          { type: "body", text: `Most engineering apprenticeship applications will ask you to provide a reference — or will request one if you progress to offer stage. A reference is a written statement from someone who can vouch for your reliability, character and ability to work. Engineering employers take references seriously.` },
+          { type: "referenceTable" },
+          { type: "body", text: `How to approach asking for a reference:\n• Ask in person or by email — not by text message.\n• Give them advance notice — do not ask at the last minute.\n• Remind them of specific things you did that are relevant to engineering: attendance, project work, practical tasks, reliability.\n• Tell them what the role involves so they can tailor their reference appropriately.\n• Always thank them — and let them know the outcome of your application.` },
+          { type: "prompt", heading: "Reference preparation checklist", items: ["I have identified at least two people who could provide a reference", "I have asked them and they have agreed", "I have given them information about the role and what I would like them to highlight", "I have their correct contact details (email and phone) to provide on applications", "I have thanked them for agreeing to support me"] }
         ]
       }
     ]
@@ -168,26 +126,6 @@ const MODULES = [
         ]
       },
       {
-        heading: "Extracurricular activities, hobbies and interests — marketing yourself beyond the job",
-        content: [
-          { type: "body", text: `Many candidates leave this section of their CV blank, or fill it with vague statements like "I enjoy socialising and going to the gym." This is a missed opportunity.\n\nFor engineering apprenticeship applicants — especially school leavers and career changers who have limited formal work experience — extracurricular activities and hobbies can be the most powerful section of your application. They tell the employer what you are like when nobody is making you do something.\n\nThe principle is the same as for every other section: do not just list the activity. Extract the skill, the responsibility, the behaviour, and the result — and connect it explicitly to what an engineering employer values.` },
-          { type: "infobox", heading: "How to translate activities into engineering-relevant evidence", rows: [
-            ["Sport (team — football, rugby, basketball, hockey)", "Teamwork, communication, performing under pressure, resilience after setbacks, commitment to regular training. If you have a leadership role (captain, vice-captain): leadership, accountability."],
-            ["Sport (individual — running, cycling, swimming, climbing)", "Self-discipline, goal-setting, managing your own training and progress, persistence. Quantify: distances, times, events entered."],
-            ["Technical hobbies (electronics, robotics, 3D printing, coding, model engineering)", "Direct sector relevance. Describe what you built or made. Mention the tools, software or components you used. Show problem-solving and persistence when things went wrong."],
-            ["Gaming (especially strategy, simulation, engineering games)", "Problem-solving, logical thinking, strategic planning. Be selective — this works better for digital/IT contexts than traditional engineering, but simulation games (Cities: Skylines, Kerbal Space Program) can be made relevant."],
-            ["DIY, building, fixing things at home", "Practical skills, attention to detail, health and safety awareness, learning from mistakes. Describe a specific project — not just 'I help my dad with DIY'."],
-            ["Music (instrument, band, orchestra)", "Discipline, practice ethic, performing under pressure, teamwork (if ensemble), attention to detail in notation and timing."],
-            ["Volunteering (scouts, cadets, community, charity)", "Leadership, responsibility, working with diverse people, reliability. Duke of Edinburgh Award is specifically valuable — employers recognise it."],
-            ["Duke of Edinburgh Award", "Highly valued by engineering employers. Shows sustained commitment, physical challenge, voluntary service and a skill element. If you have it, lead with it."],
-            ["Young Enterprise / STEM clubs / school competitions", "Direct engineering and business relevance. Describe your specific role and contribution — not just that you participated."],
-          ]},
-          { type: "comparison", question: "Extracurricular section — weak vs strong", weak: "Hobbies and interests: I enjoy football, gaming and going to the gym. I also like fixing things.", strong: `Interests and activities:\n\nRobotics Club — St Andrews Academy (2022–present)\nMember of the school robotics team. Built and programmed a line-following robot for the regional STEM competition using Arduino. Took responsibility for the sensor calibration after we identified inconsistency in the testing results. Our team placed second in the regional heat.\n\nDuke of Edinburgh Award — Bronze (completed 2023)\nPhysical: Running — completed three 5k events. Voluntary: Assisted at local foodbank for 13 weeks. Skill: Guitar — practised and recorded a short piece for assessment.\n\nFootball — Linwood Community FC (2019–present)\nPlay in central midfield. Train twice weekly and play on Saturdays. Captain for the under-17 squad last season — responsible for pre-match warmups and communicating team strategy during games.` },
-          { type: "body", text: `When writing this section, ask yourself for each activity:\n\n• What did I actually do (not just attend)?\n• What was my specific role or contribution?\n• Did I take on any responsibility, lead anything, or improve at it over time?\n• Can I quantify anything — times, numbers, duration, results?\n• What skill does this demonstrate that an engineering employer would value?\n\nIf you can answer those questions, you have the material for a strong entry. If you cannot, the activity probably should not take up space on your CV.` },
-          { type: "prompt", heading: "Your extracurricular inventory — write your answers before drafting your CV", items: ["What activities have I done outside school or work in the last 2–3 years?", "For each one: what was my specific role and contribution?", "Did I improve at anything, complete something or take on responsibility?", "Can I quantify any of it (times, positions, events, hours)?", "Which of these is most relevant to an engineering employer and why?"] }
-        ]
-      },
-      {
         heading: "Application form — full model answers",
         content: [
           { type: "body", text: `Model answers show the depth expected. They are not scripts to memorise — they are examples of how to think, structure and evidence your answers.\n\nNote the difference in starting point for each profile type. A school leaver builds from projects and coursework. A career changer translates existing experience. A graduate reframes academic work as practical evidence. An adult returner shows what sustained employment taught them.` },
@@ -195,15 +133,6 @@ const MODULES = [
           { type: "comparison", question: "Why do you want to work for this company?", weak: "I want to work here because it is a good company with a good reputation.", strong: "I researched this company's work on defence systems contracts and its apprenticeship structure before applying. The emphasis on safety culture and continuous improvement in your published values aligns with the way I approach work. I am also attracted by the structured progression route — I want to develop properly, not just get a foot in the door." },
           { type: "comparison", question: "Give an example of when you worked effectively as part of a team.", weak: "I work well in a team. I am a good communicator and I always do my share.", strong: "In my current role in logistics, our team had to restructure our entire picking process during a system migration with 48 hours' notice. I coordinated between four colleagues, divided the manual tasks, and tracked progress against our daily targets on a whiteboard. We hit 94% of our standard output on day one of the new system. I learned that in high-pressure situations, clarity of communication and keeping people focused on the task — not the problem — makes the difference." },
           { type: "comparison", question: "Describe a time when you solved a problem.", weak: "I am good at solving problems. I stay calm under pressure and always find a solution.", strong: "During my HNC project, a component I had designed failed tolerance testing at the third iteration. Rather than guessing the fix, I went back to the original specification, mapped each measurement against the tolerance band, and identified that the error had compounded across two dimensions. I redesigned one dimension only, reran the test, and it passed. The lesson I took was that systematic diagnosis is faster than trial and error — and that matters in an engineering environment where materials and time are not free." }
-        ]
-      },
-      {
-        heading: "Obtaining a reference",
-        content: [
-          { type: "body", text: `Most engineering apprenticeship applications will ask you to provide a reference — or will request one if you progress to offer stage. A reference is a written statement from someone who can vouch for your reliability, character and ability to work. Engineering employers take references seriously.` },
-          { type: "referenceTable" },
-          { type: "body", text: `How to approach asking for a reference:\n• Ask in person or by email — not by text message.\n• Give them advance notice — do not ask at the last minute.\n• Remind them of specific things you did that are relevant to engineering: attendance, project work, practical tasks, reliability.\n• Tell them what the role involves so they can tailor their reference appropriately.\n• Always thank them — and let them know the outcome of your application.` },
-          { type: "prompt", heading: "Reference preparation checklist", items: ["I have identified at least two people who could provide a reference", "I have asked them and they have agreed", "I have given them information about the role and what I would like them to highlight", "I have their correct contact details (email and phone) to provide on applications", "I have thanked them for agreeing to support me"] }
         ]
       }
     ]
@@ -222,16 +151,16 @@ const MODULES = [
           { type: "callout", text: `Questions marked ★ use the production table below. Read the table carefully before attempting them — this is exactly what SHL and Cubiks tests require you to do.` },
           { type: "productionTable" },
           { type: "practiceQs", qs: [
-            { q: "★ Line A missed its weekly target. By how many units did it fall short?", a: "50 units short.", opts: ["25 units short.", "50 units short.", "75 units short.", "Line A met its target."], why: "Step 1 — sum Line A: 312 + 298 + 320 + 305 + 315 = 1,550. Step 2 — compare to target: 1,600 − 1,550 = 50. Two steps, both required. This is the standard SHL table-reading format." },
-            { q: "★ Which line achieved the highest percentage of its weekly target?", a: "Line B — 98.6% of target.", opts: ["Line A — 96.9%", "Line B — 98.6%", "Line C — 97.1%", "Line D — 94.7%"], why: "Line A: 1,550 ÷ 1,600 = 96.9%. Line B: 1,380 ÷ 1,400 = 98.6%. Line C: 2,040 ÷ 2,100 = 97.1%. Line D: 900 ÷ 950 = 94.7%. Common mistake: assuming the line with the highest raw output wins. You must compare each line to its own target." },
-            { q: "★ On Wednesday, was the combined output across all four lines above or below the daily combined target of 1,200 units? By how much?", a: "Below target — Wednesday total was 1,195, missing by 5 units.", opts: ["Above by 5 units", "Below by 5 units", "Below by 25 units", "Exactly on target"], why: "Sum the Wednesday column: 320 + 265 + 420 + 190 = 1,195. Compare to 1,200. Easy to misread the column under time pressure — this is where candidates lose marks." },
-            { q: "★ If Line B increases its output by 12% every day next week, what will its Monday output be? Round to the nearest whole unit.", a: "308 units.", opts: ["275 units", "287 units", "308 units", "330 units"], why: "275 × 1.12 = 308. Read the correct cell first (Line B, Monday = 275), then apply the percentage increase. Two steps, easy to multiply the wrong row." },
-            { q: "A quality inspector checks 3 batches. Batch 1: 240 units, 4 defective. Batch 2: 180 units, 6 defective. Batch 3: 300 units, 9 defective. Which batch has the highest defect rate?", a: "Batch 2 — defect rate 3.3%.", opts: ["Batch 1 — 1.67%", "Batch 2 — 3.33%", "Batch 3 — 3.0%", "Batch 3 — it has the most defects"], why: "Batch 1: 4 ÷ 240 = 1.67%. Batch 2: 6 ÷ 180 = 3.33%. Batch 3: 9 ÷ 300 = 3.0%. Three parallel calculations then a comparison. Batch 3 has more defects in total but a lower rate — a common source of error." },
-            { q: "A component must weigh between 1.45kg and 1.55kg. A batch of 5 components has a total weight of 7.6kg. Is it possible that all components are within tolerance?", a: "Not necessarily. The average is 1.52kg (within tolerance) but individual components could still be outside the range.", opts: ["Yes — the average is within tolerance so all are fine", "No — 7.6kg divided by 5 is outside the range", "Not necessarily — the average is within tolerance but individuals could still be outside it", "Yes — 1.52kg is the midpoint of the tolerance band"], why: "Step 1: 7.6 ÷ 5 = 1.52kg average. Step 2: recognise that an average within tolerance does not guarantee each individual item is. This tests analytical reasoning — the type of question that separates strong candidates from the rest." },
-            { q: "A maintenance team completes 3 jobs taking 1h 45m, 2h 20m, and 55m. They have a 7.5-hour working day with a 30-minute unpaid break. How much working time remains?", a: "2 hours remaining.", opts: ["1 hour 30 minutes", "2 hours", "2 hours 30 minutes", "3 hours"], why: "Step 1 — total job time: 1h45 + 2h20 + 55m = 5h00. Step 2 — available working time: 7.5h − 0.5h = 7h. Step 3 — remainder: 7h − 5h = 2h. Three steps with mixed time units — easy to lose track." },
-            { q: "Material costs £4.80 per metre. A job requires 3 lengths of 2.4m, 2 lengths of 1.75m, and 1 length of 0.9m. What is the total material cost?", a: "£55.68.", opts: ["£48.00", "£52.80", "£55.68", "£60.48"], why: "Step 1 — total length: (3 × 2.4) + (2 × 1.75) + 0.9 = 7.2 + 3.5 + 0.9 = 11.6m. Step 2 — cost: 11.6 × £4.80 = £55.68. Common mistake: multiplying each length separately and losing accuracy." },
-            { q: "A machine runs at 85% efficiency. At full capacity it produces 400 units per hour. How many units does it produce in a 7.5-hour shift at its actual efficiency?", a: "2,550 units.", opts: ["2,250 units", "2,400 units", "2,550 units", "3,000 units"], why: "Step 1 — actual rate: 400 × 0.85 = 340 units/hour. Step 2 — shift output: 340 × 7.5 = 2,550. Applying efficiency as a multiplier before calculating volume — a standard format in manufacturing contexts." },
-            { q: "Engineer A checks 1 component every 4 minutes. Engineer B checks 1 every 6 minutes. Working simultaneously, how many components do they check together in a 2-hour period?", a: "50 components.", opts: ["30 components", "40 components", "50 components", "60 components"], why: "Step 1 — convert: 2 hours = 120 minutes. Step 2 — A's output: 120 ÷ 4 = 30. Step 3 — B's output: 120 ÷ 6 = 20. Step 4 — combined: 30 + 20 = 50. Four steps. Most candidates who get this wrong forget to convert hours to minutes first." }
+            { q: "★ Line A missed its weekly target. By how many units did it fall short?", a: "50 units short.", why: "Step 1 — sum Line A: 312 + 298 + 320 + 305 + 315 = 1,550. Step 2 — compare to target: 1,600 − 1,550 = 50. Two steps, both required. This is the standard SHL table-reading format." },
+            { q: "★ Which line achieved the highest percentage of its weekly target?", a: "Line B — 98.6% of target.", why: "Line A: 1,550 ÷ 1,600 = 96.9%. Line B: 1,380 ÷ 1,400 = 98.6%. Line C: 2,040 ÷ 2,100 = 97.1%. Line D: 900 ÷ 950 = 94.7%. Common mistake: assuming the line with the highest raw output wins. You must compare each line to its own target." },
+            { q: "★ On Wednesday, was the combined output across all four lines above or below the daily combined target of 1,200 units? By how much?", a: "Below target — Wednesday total was 1,195, missing by 5 units.", why: "Sum the Wednesday column: 320 + 265 + 420 + 190 = 1,195. Compare to 1,200. Easy to misread the column under time pressure — this is where candidates lose marks." },
+            { q: "★ If Line B increases its output by 12% every day next week, what will its Monday output be? Round to the nearest whole unit.", a: "308 units.", why: "275 × 1.12 = 308. Read the correct cell first (Line B, Monday = 275), then apply the percentage increase. Two steps, easy to multiply the wrong row." },
+            { q: "A quality inspector checks 3 batches. Batch 1: 240 units, 4 defective. Batch 2: 180 units, 6 defective. Batch 3: 300 units, 9 defective. Which batch has the highest defect rate?", a: "Batch 2 — defect rate 3.3%.", why: "Batch 1: 4 ÷ 240 = 1.67%. Batch 2: 6 ÷ 180 = 3.33%. Batch 3: 9 ÷ 300 = 3.0%. Three parallel calculations then a comparison. Batch 3 has more defects in total but a lower rate — a common source of error." },
+            { q: "A component must weigh between 1.45kg and 1.55kg. A batch of 5 components has a total weight of 7.6kg. Is it possible that all components are within tolerance?", a: "Not necessarily. The average is 1.52kg (within tolerance) but individual components could still be outside the range.", why: "Step 1: 7.6 ÷ 5 = 1.52kg average. Step 2: recognise that an average within tolerance does not guarantee each individual item is. This tests analytical reasoning — the type of question that separates strong candidates from the rest." },
+            { q: "A maintenance team completes 3 jobs taking 1h 45m, 2h 20m, and 55m. They have a 7.5-hour working day with a 30-minute unpaid break. How much working time remains?", a: "2 hours remaining.", why: "Step 1 — total job time: 1h45 + 2h20 + 55m = 5h00. Step 2 — available working time: 7.5h − 0.5h = 7h. Step 3 — remainder: 7h − 5h = 2h. Three steps with mixed time units — easy to lose track." },
+            { q: "Material costs £4.80 per metre. A job requires 3 lengths of 2.4m, 2 lengths of 1.75m, and 1 length of 0.9m. What is the total material cost?", a: "£55.68.", why: "Step 1 — total length: (3 × 2.4) + (2 × 1.75) + 0.9 = 7.2 + 3.5 + 0.9 = 11.6m. Step 2 — cost: 11.6 × £4.80 = £55.68. Common mistake: multiplying each length separately and losing accuracy." },
+            { q: "A machine runs at 85% efficiency. At full capacity it produces 400 units per hour. How many units does it produce in a 7.5-hour shift at its actual efficiency?", a: "2,550 units.", why: "Step 1 — actual rate: 400 × 0.85 = 340 units/hour. Step 2 — shift output: 340 × 7.5 = 2,550. Applying efficiency as a multiplier before calculating volume — a standard format in manufacturing contexts." },
+            { q: "Engineer A checks 1 component every 4 minutes. Engineer B checks 1 every 6 minutes. Working simultaneously, how many components do they check together in a 2-hour period?", a: "50 components.", why: "Step 1 — convert: 2 hours = 120 minutes. Step 2 — A's output: 120 ÷ 4 = 30. Step 3 — B's output: 120 ÷ 6 = 20. Step 4 — combined: 30 + 20 = 50. Four steps. Most candidates who get this wrong forget to convert hours to minutes first." }
           ]}
         ]
       },
@@ -251,11 +180,11 @@ const MODULES = [
         content: [
           { type: "body", text: `Where used, these tests assess simple physical logic — gears, levers, pulleys, forces, direction of movement. You do not need A-level physics. You need to understand the principles.` },
           { type: "practiceQs", qs: [
-            { q: "If gear A turns clockwise, which direction does a directly connected gear B turn?", a: "Anti-clockwise.", opts: ["Clockwise", "Anti-clockwise", "The same direction as gear A", "It depends on the size of the gears"], why: "Principle: Meshed gears always turn in opposite directions." },
-            { q: "If a longer lever arm is used with the same applied force, what happens to the turning effect?", a: "It increases.", opts: ["It decreases", "It stays the same", "It increases", "It depends on the fulcrum position"], why: "Principle: Turning effect (moment) = force × distance. Longer arm = greater moment." },
-            { q: "A simple open belt connects two pulleys. If the driving pulley turns clockwise, which direction does the driven pulley turn?", a: "Clockwise (same direction).", opts: ["Anti-clockwise", "Clockwise (same direction)", "It stops moving", "It alternates direction"], why: "Principle: An open belt transfers motion in the same direction. A crossed belt reverses it." },
-            { q: "Gear A has 10 teeth, gear B has 20 teeth. If gear A completes 4 full rotations, how many rotations does gear B complete?", a: "2 rotations.", opts: ["1 rotation", "2 rotations", "4 rotations", "8 rotations"], why: "Principle: Ratio is 10:20 = 1:2. Gear B turns half as many times as gear A." },
-            { q: "A load hangs from a pulley system with two supporting rope sections. What is the mechanical advantage?", a: "2.", opts: ["1", "2", "3", "4"], why: "Principle: Two rope sections support the load, so the effort needed is halved." }
+            { q: "If gear A turns clockwise, which direction does a directly connected gear B turn?", a: "Anti-clockwise.", why: "Principle: Meshed gears always turn in opposite directions." },
+            { q: "If a longer lever arm is used with the same applied force, what happens to the turning effect?", a: "It increases.", why: "Principle: Turning effect (moment) = force × distance. Longer arm = greater moment." },
+            { q: "A simple open belt connects two pulleys. If the driving pulley turns clockwise, which direction does the driven pulley turn?", a: "Clockwise (same direction).", why: "Principle: An open belt transfers motion in the same direction. A crossed belt reverses it." },
+            { q: "Gear A has 10 teeth, gear B has 20 teeth. If gear A completes 4 full rotations, how many rotations does gear B complete?", a: "2 rotations.", why: "Principle: Ratio is 10:20 = 1:2. Gear B turns half as many times as gear A." },
+            { q: "A load hangs from a pulley system with two supporting rope sections. What is the mechanical advantage?", a: "2.", why: "Principle: Two rope sections support the load, so the effort needed is halved." }
           ]},
           { type: "prepRoutine" }
         ]
@@ -346,22 +275,6 @@ const MODULES = [
           { type: "body", text: `A proper system does not leave you at a dead end. If you are not yet competitive for direct entry, here are your realistic next moves.` },
           { type: "rerouteTable" },
           { type: "finalPrompt", items: ["If I am not ready now, my next best move is: ___", "I will review my progress again on this date: ___", "The one thing I will do differently in my next application is: ___", "The person I will ask to do a mock interview with me is: ___"] }
-        ]
-      }
-    ]
-  },
-  {
-    id: 7,
-    icon: "✅",
-    title: "Knowledge Check",
-    subtitle: "Test your understanding before you apply",
-    color: T,
-    sections: [
-      {
-        heading: "Module sense check — are you ready?",
-        content: [
-          { type: "body", text: `This knowledge check covers the key principles from across the TASS Engineering module. It is not a test of recall — it is a test of whether you have understood the mindset, the behaviours and the standards expected of a competitive engineering apprenticeship candidate.\n\nWork through the questions honestly. If you get something wrong, go back to the relevant section before your next application.` },
-          { type: "quiz" }
         ]
       }
     ]
@@ -491,67 +404,30 @@ function ProductionTable() {
 }
 
 function PracticeQs({ qs, color }) {
-  const [state, setState] = useState({});
-
-  function handleAnswer(i, optIdx) {
-    if (state[i]?.answered !== undefined) return;
-    setState(p => ({ ...p, [i]: { answered: optIdx } }));
-  }
-
+  const [revealed, setReveal] = useState({});
   return (
     <div style={{ marginBottom: 18 }}>
       {qs.map((pq, i) => {
         const usesTable = pq.q.startsWith("★");
-        const s = state[i] || {};
-        const answered = s.answered !== undefined;
-        const correctIdx = pq.opts ? pq.opts.indexOf(pq.a) : -1;
-
         return (
-          <div key={i} style={{ background: "#F8FAFC", border: `1px solid ${usesTable ? T + "40" : "#E2E8F0"}`, borderLeft: `4px solid ${usesTable ? T : "#CBD5E0"}`, borderRadius: 12, padding: 16, marginBottom: 12 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 12 }}>
-              <p style={{ color: N, fontWeight: 700, fontSize: 14, lineHeight: 1.55, margin: 0, flex: 1 }}>{pq.q}</p>
-              {usesTable && <span style={{ background: T + "15", color: T, border: `1px solid ${T}40`, borderRadius: 99, padding: "2px 9px", fontSize: 11, fontWeight: 700, flexShrink: 0 }}>Uses table</span>}
+          <div key={i} style={{ background: "#F8FAFC", border: `1px solid ${usesTable ? "`${T}30`" : "#E2E8F0"}`, borderLeft: `4px solid ${usesTable ? T : "#E2E8F0"}`, borderRadius: 12, padding: 16, marginBottom: 10 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 10 }}>
+              <p style={{ color: N, fontWeight: 600, fontSize: 14, lineHeight: 1.5, margin: 0, flex: 1 }}>{pq.q}</p>
+              {usesTable && <span style={{ background: "`${T}15`", color: T, border: "1px solid `${T}40`", borderRadius: 99, padding: "2px 9px", fontSize: 11, fontWeight: 700, flexShrink: 0 }}>Uses table</span>}
             </div>
-
-            {pq.opts ? (
-              <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                {pq.opts.map((opt, j) => {
-                  let bg = "#fff", border = "1.5px solid #E2E8F0", col = "#2D3748";
-                  if (answered) {
-                    if (j === correctIdx) { bg = "#F0FDF4"; border = "1.5px solid #10B981"; col = "#065F46"; }
-                    else if (j === s.answered) { bg = "#FEF2F2"; border = "1.5px solid #EF4444"; col = "#991B1B"; }
-                  }
-                  return (
-                    <button key={j} onClick={() => handleAnswer(i, j)}
-                      style={{ background: bg, border, color: col, borderRadius: 9, padding: "10px 13px", textAlign: "left", cursor: answered ? "default" : "pointer", fontSize: 13, fontWeight: answered && j === correctIdx ? 700 : 400, fontFamily: "inherit", transition: "all 0.15s" }}>
-                      <span style={{ fontWeight: 700, marginRight: 8, color: answered ? col : "#999" }}>{String.fromCharCode(65 + j)}.</span>{opt}
-                    </button>
-                  );
-                })}
-              </div>
-            ) : answered ? (
-              <div style={{ background: "#F0FDF4", borderRadius: 8, padding: 10, marginBottom: 8 }}>
-                <span style={{ color: G, fontWeight: 700, fontSize: 13 }}>Answer: </span>
-                <span style={{ color: "#14532D", fontSize: 13 }}>{pq.a}</span>
+            {revealed[i] ? (
+              <div>
+                <div style={{ background: "#F0FDF4", borderRadius: 8, padding: 10, marginBottom: 8 }}>
+                  <span style={{ color: G, fontWeight: 700, fontSize: 13 }}>Answer: </span>
+                  <span style={{ color: "#14532D", fontSize: 13 }}>{pq.a}</span>
+                </div>
+                <p style={{ color: "#777", fontSize: 12, lineHeight: 1.6, margin: 0, fontStyle: "italic" }}>💡 {pq.why}</p>
               </div>
             ) : (
-              <button onClick={() => setState(p => ({ ...p, [i]: { answered: 0 } }))}
-                style={{ background: color, border: "none", color: "#fff", borderRadius: 8, padding: "7px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}>
+              <button onClick={() => setReveal(p => ({ ...p, [i]: true }))}
+                style={{ background: color, border: "none", color: "#fff", borderRadius: 8, padding: "7px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer" }}>
                 Reveal answer
               </button>
-            )}
-
-            {answered && (
-              <div style={{ marginTop: 10 }}>
-                {pq.opts && (
-                  <div style={{ background: s.answered === correctIdx ? "#F0FDF4" : "#FEF2F2", border: `1px solid ${s.answered === correctIdx ? "#10B981" : "#EF4444"}`, borderRadius: 8, padding: "9px 12px", marginBottom: 8 }}>
-                    <p style={{ color: s.answered === correctIdx ? G : R, fontWeight: 700, fontSize: 12, margin: "0 0 2px" }}>
-                      {s.answered === correctIdx ? "✅ Correct" : `✗ Incorrect — the answer is ${pq.a}`}
-                    </p>
-                  </div>
-                )}
-                <p style={{ color: "#666", fontSize: 12, lineHeight: 1.65, margin: 0, fontStyle: "italic" }}>💡 {pq.why}</p>
-              </div>
             )}
           </div>
         );
@@ -559,7 +435,6 @@ function PracticeQs({ qs, color }) {
     </div>
   );
 }
-
 
 function InfoBox({ heading, rows, color }) {
   return (
@@ -1043,7 +918,7 @@ function FinalPrompt({ items }) {
 
 // ─── Section dispatcher ───────────────────────────────────────────────────────
 
-function RenderContent({ content, mod, setScreen }) {
+function RenderContent({ content, mod }) {
   return content.map((item, i) => {
     switch (item.type) {
       case "body": return <Body key={i} text={item.text} color={mod.color} />;
@@ -1070,16 +945,6 @@ function RenderContent({ content, mod, setScreen }) {
       case "cases": return <Cases key={i} cases={item.cases} />;
       case "rerouteTable": return <RerouteTable key={i} />;
       case "finalPrompt": return <FinalPrompt key={i} items={item.items} />;
-      case "quiz": return (
-        <div key={i} style={{ background: "#fff", border: `2px solid ${T}`, borderRadius: 14, padding: 20, marginTop: 8, textAlign: "center" }}>
-          <div style={{ fontSize: 40, marginBottom: 12 }}>✅</div>
-          <p style={{ color: N, fontWeight: 800, fontSize: 16, margin: "0 0 8px" }}>Ready to test yourself?</p>
-          <p style={{ color: "#555", fontSize: 14, lineHeight: 1.65, margin: "0 0 16px" }}>8 questions covering sector knowledge, behaviours, safety and the TASS approach. Takes about 5 minutes. Get 6 or more right and you're applying the right mindset.</p>
-          <button onClick={() => setScreen("quiz")} style={{ background: T, border: "none", color: "#fff", borderRadius: 10, padding: "12px 28px", fontWeight: 700, fontSize: 15, cursor: "pointer", fontFamily: "inherit" }}>
-            Start knowledge check →
-          </button>
-        </div>
-      );
       default: return null;
     }
   });
@@ -1111,7 +976,7 @@ export default function TASSEngineering() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
+          model: "claude-sonnet-4-5-20250929",
           max_tokens: 1000,
           system: `You are the TASS Engineering Apprenticeship Coach. Your approach is direct, evidence-focused and unsparing — you don't offer vague encouragement, you help candidates prepare properly.
 
@@ -1142,10 +1007,10 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
         })
       });
       const data = await res.json();
-      const reply = data.content?.[0]?.text || "Connection issue — please try again.";
+      const reply = data.content?.[0]?.text || `Error: ${error.message || "Connection issue — please try again."}`;
       setMsgs([...newMsgs, { role: "assistant", content: reply }]);
     } catch {
-      setMsgs([...newMsgs, { role: "assistant", content: "Connection issue — please try again." }]);
+      setMsgs([...newMsgs, { role: "assistant", content: `Error: ${error.message || "Connection issue — please try again."}` }]);
     }
     setAiLoading(false);
   };
@@ -1165,7 +1030,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
   if (screen === "quiz") {
     const qData = QUIZ[quiz.q];
     return (
-      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh" }}>
+      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh" }}>
         <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } @keyframes b{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}} button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
         <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "14px 20px", display: "flex", alignItems: "center", gap: 12 }}>
           <button onClick={() => { setScreen("home"); setQuiz({ q: 0, score: 0, answered: null, done: false }); }}
@@ -1174,7 +1039,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
           <TASSLogo size="sm" theme="dark" />
           <div style={{ marginLeft: "auto", color: T, fontWeight: 800, fontSize: 16 }}>{quiz.score}/{QUIZ.length}</div>
         </div>
-        <div style={{ padding: "20px 16px", maxWidth: 640, margin: "0 auto" }}>
+        <div style={{ padding: "20px 16px", maxWidth: 600, margin: "0 auto" }}>
           {quiz.done ? (
             <div style={{ background: "#fff", borderRadius: 16, padding: 32, textAlign: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}>
               <div style={{ fontSize: 52, marginBottom: 16 }}>{quiz.score >= 6 ? "🏆" : quiz.score >= 4 ? "💪" : "📚"}</div>
@@ -1234,7 +1099,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
   // ── AI Coach ──
   if (screen === "ai") {
     return (
-      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
         <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } @keyframes b{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}} button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
         <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "14px 20px", display: "flex", alignItems: "center", gap: 12 }}>
           <button onClick={() => setScreen("home")} style={{ background: "rgba(255,255,255,0.15)", border: "none", color: "#fff", borderRadius: 8, padding: "6px 12px", cursor: "pointer", fontSize: 14 }}>← Back</button>
@@ -1283,7 +1148,7 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
     const mod = MODULES[modIdx];
     const sec = mod.sections[secIdx];
     return (
-      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh" }}>
+      <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh" }}>
         <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } button:focus, input:focus, textarea:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
         <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "14px 20px", display: "flex", alignItems: "center", gap: 12 }}>
           <button onClick={() => { setScreen("home"); setSecIdx(0); }} style={{ background: "rgba(255,255,255,0.15)", border: "none", color: "#fff", borderRadius: 8, padding: "6px 12px", cursor: "pointer", fontSize: 14 }}>← Back</button>
@@ -1300,10 +1165,10 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
             </button>
           ))}
         </div>
-        <div style={{ padding: "20px 16px", maxWidth: 640, margin: "0 auto" }}>
+        <div style={{ padding: "20px 16px", maxWidth: 720, margin: "0 auto" }}>
           <h2 style={{ color: N, fontSize: 19, fontWeight: 800, marginBottom: 4, lineHeight: 1.3 }}>{sec.heading}</h2>
           <div style={{ height: 3, width: 36, background: `linear-gradient(90deg, ${T}, #0D8B7D)`, borderRadius: 2, marginBottom: 18 }} />
-          <RenderContent content={sec.content} mod={mod} setScreen={setScreen} />
+          <RenderContent content={sec.content} mod={mod} />
           <div style={{ display: "flex", gap: 10, marginTop: 24 }}>
             {secIdx > 0 && <button onClick={() => setSecIdx(s => s-1)} style={{ flex: 1, padding: "12px", background: "#fff", border: `2px solid ${T}`, color: T, borderRadius: 10, fontWeight: 700, cursor: "pointer", fontSize: 14 }}>← Previous</button>}
             {secIdx < mod.sections.length - 1
@@ -1317,21 +1182,21 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
 
   // ── Home ──
   return (
-    <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F0F4F8", minHeight: "100vh" }}>
-      <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F0F4F8; } ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; } button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
-      <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "12px 16px", position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
-        <div style={{ maxWidth: 640, margin: "0 auto", display: "flex", alignItems: "center", gap: 12 }}>
+    <div style={{ fontFamily: "'Segoe UI', system-ui, sans-serif", background: "#F5F7FA", minHeight: "100vh" }}>
+      <style>{`* { box-sizing: border-box; } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #F5F7FA; } ::-webkit-scrollbar-thumb { background: #D1D9E6; border-radius: 4px; } button:focus, input:focus { outline: 2px solid #1A9E8F; outline-offset: 2px; }`}</style>
+      <div style={{ background: `linear-gradient(135deg, ${N} 0%, #1A3060 100%)`, padding: "28px 20px 32px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -50, right: -30, width: 180, height: 180, borderRadius: "50%", background: "rgba(26,158,143,0.08)" }} />
+        <div style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 16 }}>
           <TASSLogo size="sm" theme="dark" />
-          <div style={{ width: 1, height: 32, background: "rgba(255,255,255,0.15)", margin: "0 4px" }} />
-          <div style={{ flex: 1 }}>
-            <div style={{ color: "rgba(255,255,255,0.6)", fontWeight: 700, fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 }}>Engineering & Manufacturing</div>
-            <div style={{ color: "#fff", fontSize: 13, fontWeight: 700, marginTop: 2 }}>Full-depth sector module</div>
+          <div>
+            <h1 style={{ color: "#fff", fontSize: 22, fontWeight: 900, lineHeight: 1.2, margin: "0 0 6px" }}>Engineering & Manufacturing</h1>
+            <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 13, lineHeight: 1.65, margin: 0 }}>Full-depth sector module · Decision, Preparation, Execution</p>
           </div>
         </div>
       </div>
 
-      <div style={{ maxWidth: 640, margin: "0 auto", padding: "20px 16px 28px" }}>
-        <button onClick={() => setScreen("ai")} style={{ width: "100%", background: `linear-gradient(135deg, ${T}, #0D8B7D)`, border: "none", borderRadius: 14, padding: "16px 18px", display: "flex", alignItems: "center", gap: 14, cursor: "pointer", boxShadow: `0 4px 20px ${T}40`, marginBottom: 20 }}>
+      <div style={{ padding: "16px 16px 0" }}>
+        <button onClick={() => setScreen("ai")} style={{ width: "100%", background: `linear-gradient(135deg, ${T}, #0D8B7D)`, border: "none", borderRadius: 14, padding: "16px 18px", display: "flex", alignItems: "center", gap: 14, cursor: "pointer", boxShadow: `0 4px 20px ${T}40`, marginBottom: 10 }}>
           <div style={{ width: 44, height: 44, background: "rgba(255,255,255,0.2)", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>⚙️</div>
           <div style={{ textAlign: "left" }}>
             <div style={{ color: "#fff", fontWeight: 800, fontSize: 16 }}>TASS Engineering Coach</div>
@@ -1339,12 +1204,22 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
           </div>
           <div style={{ marginLeft: "auto", color: "rgba(255,255,255,0.6)", fontSize: 20 }}>→</div>
         </button>
+        <button onClick={() => setScreen("quiz")} style={{ width: "100%", background: N, border: "none", borderRadius: 14, padding: "14px 18px", display: "flex", alignItems: "center", gap: 14, cursor: "pointer", marginBottom: 20 }}>
+          <div style={{ width: 44, height: 44, background: A + "25", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>🧮</div>
+          <div style={{ textAlign: "left" }}>
+            <div style={{ color: "#fff", fontWeight: 800, fontSize: 15 }}>Knowledge Check</div>
+            <div style={{ color: "rgba(255,255,255,0.65)", fontSize: 12 }}>8 questions drawn from the module content</div>
+          </div>
+          <div style={{ marginLeft: "auto", color: A, fontWeight: 700, fontSize: 13 }}>Start →</div>
+        </button>
+      </div>
 
+      <div style={{ padding: "0 16px 28px" }}>
         <div style={{ fontSize: 11, color: "#999", fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, marginBottom: 12 }}>Module content</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {MODULES.map((mod, i) => (
             <button key={mod.id} onClick={() => { setModIdx(i); setSecIdx(0); setScreen("module"); }}
-              style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 12, cursor: "pointer", boxShadow: "0 1px 4px rgba(0,0,0,0.04)", textAlign: "left" }}>
+              style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 14, padding: "14px 16px", display: "flex", alignItems: "center", gap: 12, cursor: "pointer", boxShadow: "0 2px 8px rgba(0,0,0,0.04)", textAlign: "left" }}>
               <div style={{ width: 46, height: 46, background: T + "18", borderRadius: 11, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>{mod.icon}</div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 10, color: T, fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 2 }}>Section {mod.id}</div>
@@ -1355,10 +1230,10 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
             </button>
           ))}
         </div>
+      </div>
 
-        <div style={{ textAlign: "center", padding: "24px 0 8px", color: "#bbb", fontSize: 11 }}>
-          <strong style={{ color: T }}>The Apprenticeship Success System™</strong> · Engineering & Manufacturing · tass.scot
-        </div>
+      <div style={{ textAlign: "center", padding: "4px 20px 28px", color: "#bbb", fontSize: 11 }}>
+        <strong style={{ color: T }}>The Apprenticeship Success System™</strong> · Engineering & Manufacturing · tass.scot
       </div>
     </div>
   );
