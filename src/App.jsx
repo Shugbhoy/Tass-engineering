@@ -1007,10 +1007,10 @@ Use UK spelling. Refer to Scottish apprenticeships as "Modern Apprenticeships". 
         })
       });
       const data = await res.json();
-      const reply = data.content?.[0]?.text || "Connection issue — please try again.";
+      const reply = data.content?.[0]?.text || data.error?.message || JSON.stringify(data);
       setMsgs([...newMsgs, { role: "assistant", content: reply }]);
     } catch (error) {
-      setMsgs([...newMsgs, { role: "assistant", content: `Connection issue — please try again. (${error.message})` }]);
+      setMsgs([...newMsgs, { role: "assistant", content: `Connection issue: ${error.message}` }]);
     }
     setAiLoading(false);
   };
