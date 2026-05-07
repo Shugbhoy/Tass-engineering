@@ -576,42 +576,187 @@ function InterviewModule(){
 // TESTS
 function TestsModule(){
   const [cat,setCat]=useState("numerical");
-  const categories={
-    numerical:{label:"Numerical",icon:"🔢",content:"Numerical reasoning tests assess your ability to interpret and work with data under time pressure. You will see graphs, tables and charts and be asked to draw conclusions or perform calculations.\n\nWhat is tested:\n• Reading graphs and tables accurately\n• Percentages, fractions and ratios\n• Rate and proportion\n• Unit conversion\n• Basic statistics (averages, totals)\n\nThe difficulty is not the maths — it is the time pressure. Most candidates who fail numerical reasoning tests know how to do the calculations but run out of time.\n\nHow to prepare:\n• Do 3 timed practice tests per week — not untimed\n• Use SHL Direct (shldirect.com) and JobTestPrep (jobtestprep.co.uk)\n• Time yourself strictly — no extra time\n• Review every wrong answer to understand the error\n• In the real test: skip questions you cannot solve in 60 seconds and return to them\n\nTypical format: 20–30 questions in 20–25 minutes. That is less than 1 minute per question.",example:"A factory produces 840 units per day operating 3 shifts of 8 hours each. If the factory increases to 4 shifts of 8 hours, and efficiency per shift remains constant, how many units will be produced per day?\n\nAnswer: 840 ÷ 3 = 280 units per shift. 280 × 4 = 1,120 units per day."},
-    mechanical:{label:"Mechanical",icon:"⚙️",content:"Mechanical reasoning tests assess your intuitive understanding of how physical systems work. Unlike maths tests, these rely on spatial thinking and physical intuition rather than calculation.\n\nWhat is tested:\n• Pulleys and gears (mechanical advantage, direction of rotation, speed)\n• Levers (effort, load, fulcrum)\n• Springs and elastic systems\n• Fluid systems (pressure, flow, valves)\n• Electrical circuits (series vs parallel, voltage, current)\n• Forces and vectors\n\nHow to prepare:\n• Use free practice tests at assessmentday.co.uk and jobtestprep.co.uk\n• Watch YouTube explanations of each topic area\n• Build intuition through physical examples — look at bicycle gearing, pulley systems, tap mechanisms\n• The best preparation is genuine curiosity about how things work — not just test practice\n\nTypical format: 25–30 questions in 25 minutes. Diagrams must be interpreted quickly.",example:"Two gears are meshed together. Gear A has 20 teeth and Gear B has 40 teeth. If Gear A rotates at 100 RPM, how fast does Gear B rotate?\n\nAnswer: Gear ratio = 20/40 = 0.5. Gear B rotates at 50 RPM (half the speed, twice the torque). Direction is reversed."},
-    spatial:{label:"Spatial",icon:"📐",content:"Spatial reasoning tests assess your ability to visualise and manipulate 3D objects — a core engineering skill.\n\nWhat is tested:\n• 3D shape rotation — which rotated view matches the original?\n• Folding — which 3D shape is produced by folding this 2D net?\n• Pattern completion — which shape continues the sequence?\n• Mirror images — which view is the correct mirror image?\n• Engineering drawings — identify the 3D object from 2D orthographic projections\n\nThis is the test most candidates find hardest because it is difficult to practise by studying — it requires visual pattern recognition that develops through practice.\n\nHow to prepare:\n• Use free spatial reasoning tests at assessmentday.co.uk\n• Practice with 3D puzzle apps (mental rotation games)\n• Handling physical objects — building with Lego, cutting card nets — builds genuine spatial intuition\n• Read engineering drawings whenever you can — orthographic projection reading is a directly applicable spatial skill\n\nTypical format: 20–25 questions in 25 minutes.",example:"A cube has its faces painted in 6 different colours. If you rotate the cube so the red face is on top and the blue face faces you, what colour is on the bottom?\n\nThis type of question requires building a mental model of the cube and rotating it — there is no formula. Genuine 3D thinking is the only approach."},
-    sjt:{label:"SJT",icon:"🎯",content:"Situational Judgement Tests present realistic workplace scenarios and ask you to rate or rank possible responses. They assess professional judgement, teamwork and — in engineering — safety awareness.\n\nWhat they assess:\n• How you respond to safety concerns\n• How you handle conflict with colleagues\n• How you deal with unclear instructions\n• How you manage mistakes\n• How you interact with supervisors and team members\n\nFor engineering SJTs specifically, safety is heavily weighted. Responses that prioritise completing the work over raising a safety concern will score poorly — even if they seem practically sensible.\n\nHow to prepare:\n• There is no formula — but understanding the employer's values helps\n• For defence and energy employers: safety culture is paramount — ALWAYS stop and raise a safety concern\n• For all employers: proactive communication scores well; avoiding difficult conversations scores poorly\n• Being honest scores better than appearing perfect\n\nExample scenario: You are halfway through a maintenance task when you realise the isolation that was performed this morning may not be covering the full extent of the system you are working on. Your supervisor is in a meeting and the task is due to be completed by end of shift.\n\nBest response: Stop work immediately. Do not complete the task until the isolation has been verified. Interrupt the supervisor's meeting if necessary — this is a safety-critical decision that cannot wait.",example:""},
-  };
-  const cat_data=categories[cat];
+  const [reveal,setReveal]=useState({});
+
+  const numQs=[
+    {q:"A production line has a target of 1,600 units per week. On Monday it produced 312, Tuesday 298, Wednesday 320, Thursday 305, Friday 315. Did it meet its target?",a:"No — total was 1,550 units, missing the target by 50 units.",opts:["Yes — target met","Short by 25 units","Short by 50 units","Short by 100 units"],why:"Step 1: sum the week — 312+298+320+305+315 = 1,550. Step 2: compare to target — 1,600−1,550 = 50 short. Two steps required. This is the standard SHL table-reading format."},
+    {q:"A component must weigh between 1.45kg and 1.55kg. A batch of 5 components has a total weight of 7.6kg. Is it possible all are within tolerance?",a:"Not necessarily — the average is 1.52kg (within tolerance) but individual components could still be outside the range.",opts:["Yes — the average is within tolerance so all are fine","Not necessarily — the average is within tolerance but individuals could still be outside","No — 7.6kg divided by 5 is outside the range","Yes — 1.52kg is the midpoint of the range"],why:"Step 1: 7.6÷5 = 1.52kg average. Step 2: recognise that an average within tolerance does NOT guarantee each individual item is within tolerance. This tests analytical reasoning — the type of question that separates strong candidates."},
+    {q:"Material costs £4.80 per metre. A job requires 3 lengths of 2.4m, 2 lengths of 1.75m, and 1 length of 0.9m. What is the total material cost?",a:"£55.68",opts:["£48.00","£52.80","£55.68","£60.48"],why:"Step 1 — total length: (3×2.4)+(2×1.75)+0.9 = 7.2+3.5+0.9 = 11.6m. Step 2 — cost: 11.6×£4.80 = £55.68. Common mistake: multiplying each length separately and losing accuracy."},
+    {q:"A machine runs at 85% efficiency. At full capacity it produces 400 units per hour. How many units does it produce in a 7.5-hour shift?",a:"2,550 units",opts:["2,250 units","2,400 units","2,550 units","3,000 units"],why:"Step 1 — actual rate: 400×0.85 = 340 units/hour. Step 2 — shift output: 340×7.5 = 2,550. Apply efficiency as a multiplier before calculating volume."},
+    {q:"A maintenance team completes 3 jobs taking 1h 45m, 2h 20m, and 55m. They have a 7.5-hour day with a 30-minute unpaid break. How much working time remains?",a:"2 hours remaining",opts:["1 hour 30 minutes","2 hours","2 hours 30 minutes","3 hours"],why:"Step 1 — total job time: 1h45+2h20+55m = 5h00. Step 2 — available working time: 7.5h−0.5h = 7h. Step 3 — remainder: 7h−5h = 2h. Three steps with mixed time units — easy to lose track."},
+    {q:"Engineer A checks 1 component every 4 minutes. Engineer B checks 1 every 6 minutes. Working simultaneously, how many do they check together in 2 hours?",a:"50 components",opts:["30","40","50","60"],why:"Step 1 — convert: 2 hours = 120 minutes. Step 2 — A: 120÷4 = 30. Step 3 — B: 120÷6 = 20. Step 4 — combined: 50. Most candidates who get this wrong forget to convert hours to minutes first."},
+  ];
+
+  const mechQs=[
+    {q:"If gear A turns clockwise, which direction does a directly connected gear B turn?",a:"Anti-clockwise",opts:["Clockwise","Anti-clockwise","The same direction","It depends on the size"],why:"Principle: Meshed gears always turn in opposite directions."},
+    {q:"Gear A has 10 teeth, gear B has 20 teeth. If gear A completes 4 full rotations, how many rotations does gear B complete?",a:"2 rotations",opts:["1","2","4","8"],why:"Gear ratio is 10:20 = 1:2. Gear B turns half as many times as gear A."},
+    {q:"A simple open belt connects two pulleys. If the driving pulley turns clockwise, which direction does the driven pulley turn?",a:"Clockwise — same direction",opts:["Anti-clockwise","Clockwise — same direction","It alternates","It stops"],why:"An open belt transfers motion in the same direction. A crossed belt reverses it."},
+    {q:"A load hangs from a pulley system with two supporting rope sections. What is the mechanical advantage?",a:"2",opts:["1","2","3","4"],why:"Two rope sections support the load — the effort needed is halved. Mechanical advantage = number of supporting rope sections."},
+    {q:"If a longer lever arm is used with the same applied force, what happens to the turning effect (moment)?",a:"It increases",opts:["It decreases","It stays the same","It increases","It depends on the fulcrum"],why:"Turning effect (moment) = force × distance. Longer arm = greater moment."},
+  ];
+
+  const sjtQs=[
+    {scenario:"You notice a colleague is not following a safety procedure on the workshop floor.",weak:"Ignore it — it is not your responsibility.",strong:"Raise it with your colleague directly if safe to do so, or report it to your supervisor. Safety overrides any discomfort about speaking up. In engineering, procedures exist because someone identified a real risk — not following them puts people at risk.",why:"Safety questions always have the same answer in engineering SJTs: speak up, every time, regardless of seniority or discomfort."},
+    {scenario:"You are unsure how to complete a task safely but your supervisor is busy in a meeting.",weak:"Have a go and figure it out yourself — you do not want to look incompetent.",strong:"Wait for an appropriate moment and ask for clarification before starting. Guessing in technical environments creates risk, wastes materials and potentially damages equipment. Asking shows professional judgement, not weakness.",why:"Never guess on a task you do not understand in an engineering environment. This is a values question — they are testing whether you will act safely under social pressure."},
+    {scenario:"You finish your assigned task before others in your team with 45 minutes left in the shift.",weak:"Wait at your workstation until the next task is assigned to you.",strong:"Check your own work first for quality, then offer to support a colleague or ask your supervisor what to do next. Proactively contributing when capacity allows is a marker of a strong apprentice.",why:"Engineering workplaces value people who look for work rather than waiting to be directed. This is a work ethic and team awareness question."},
+    {scenario:"You make an error during a manufacturing task that affects a component. Nobody else saw it.",weak:"Try to correct it yourself without telling anyone to avoid embarrassment.",strong:"Report it immediately to your supervisor. In engineering, an unreported error can create downstream quality problems or safety risks. Early reporting reduces the impact. This is what professional integrity looks like.",why:"Honesty about mistakes is taken very seriously in engineering and aerospace contexts where a concealed error could affect safety. This question tests integrity, not competence."},
+    {scenario:"A colleague asks you to sign off a quality check for a component you have not inspected yourself.",weak:"Sign it off — your colleague is more experienced and you trust them.",strong:"Decline to sign off work you have not personally inspected. Explain that the signature certifies your personal verification, not your trust in someone else. Offer to inspect it yourself before signing.",why:"In aerospace and defence manufacturing especially, signing a work record is a legal certification of personal inspection. Signing off work you have not done is professional misconduct — this tests whether candidates understand that."},
+  ];
+
+  const acScenarios=[
+    {title:"Bridge building challenge",desc:"Your team of 5 has 20 minutes to design and build a bridge using only paper and tape that can hold a 500g weight. You must agree on a design as a team before building.",watch:["Who listens as well as speaks","Who helps the group decide rather than dominating","Who builds on others' ideas rather than dismissing them","Who checks progress against the time limit","Who stays constructive when an idea does not work"],avoid:["Talking over others","Dismissing ideas without engaging with them","Only speaking when you have something impressive to say","Going silent and disengaging if your idea is not chosen","Performing leadership rather than genuinely helping the group"],tip:"The person who helps the group make a decision — even if it is not their idea — is often rated higher than the person who had the best idea but created friction getting it accepted."},
+    {title:"Resource allocation scenario",desc:"Your team has a budget of £10,000 to allocate across 6 maintenance jobs. Each job has a cost, a risk level if not done, and an impact on production. You have 25 minutes to agree on an allocation and present it.",watch:["Whether candidates read the brief carefully before speaking","Whether decisions are based on the evidence in the brief or personal preference","Whether candidates check that the group agrees before moving on","Whether the final answer actually adds up to £10,000","Whether the presentation is clear and structured"],avoid:["Jumping to a decision before reading all the information","Repeating the same point louder when others disagree","Spending 20 of the 25 minutes discussing and leaving no time to prepare the presentation","Taking over the presentation without checking if others want to contribute"],tip:"In resource allocation scenarios, showing your working matters as much as the answer. Assessors watch how you reason through the problem, not just what you decide."},
+    {title:"Written scenario — safety incident report",desc:"You have 15 minutes to read a brief account of a near-miss incident in a workshop and write a short report (maximum 200 words) identifying: what happened, what the immediate causes were, and what should be done to prevent recurrence.",model:"Subject: Near-Miss Incident Report — Workshop Bay 3, [Date]
+
+Summary of incident:
+At approximately 14:30, a grinder wheel guard was found to be missing from a bench grinder in Workshop Bay 3 following a tool change earlier in the shift. The guard had been removed to fit a larger wheel and had not been refitted before the grinder was returned to service. A technician noticed the missing guard before use and removed the grinder from service.
+
+Immediate causes:
+1. Guard removed during tool change and not refitted.
+2. No formal check-out/check-in procedure for grinder guards.
+3. The returning technician did not complete a pre-use inspection.
+
+Recommended preventive actions:
+1. Introduce a pre-use inspection checklist for all abrasive tools.
+2. Brief all workshop staff on the requirement to inspect before use.
+3. Review the tool change procedure to include guard refitment as a mandatory step before return to service.
+
+Reported by: [Name], [Date]",tip:"What assessors look for: professional structure, factual accuracy (no guessing beyond the brief), clear identification of causes — not just symptoms — and practical recommendations. Tone should be factual, not dramatic."},
+  ];
+
   return (
     <div>
-      <PageHeader icon="🧮" title="Test Preparation" subtitle="Numerical reasoning, mechanical reasoning, spatial reasoning and situational judgement — how to prepare and what to expect."/>
-      <InfoBox text="Online tests screen out the majority of applicants at major engineering employers before a human reads your application. Most candidates who fail know the content — they fail because they do not practise under timed conditions." type="warning"/>
-      <NavTabBar options={Object.entries(categories).map(([k,v])=>({id:k,label:v.icon+" "+v.label}))} active={cat} onSelect={setCat}/>
-      <Card>
-        <p style={{color:NAVY,fontWeight:700,fontSize:13,margin:"0 0 12px",textTransform:"uppercase",letterSpacing:0.5}}>{cat_data.label} Reasoning</p>
-        <p style={{color:"#444",fontSize:13,lineHeight:1.75,margin:"0 0 14px",whiteSpace:"pre-line"}}>{cat_data.content}</p>
-        {cat_data.example&&(
-          <div style={{background:"#EFF6FF",borderLeft:`3px solid ${STEEL}`,borderRadius:8,padding:"11px 13px"}}>
-            <p style={{color:STEEL,fontWeight:700,fontSize:11,textTransform:"uppercase",margin:"0 0 6px"}}>Example question</p>
-            <p style={{color:"#1E3A8A",fontSize:13,lineHeight:1.7,margin:0,whiteSpace:"pre-line"}}>{cat_data.example}</p>
-          </div>
-        )}
-      </Card>
-      <Card>
-        <p style={{color:TEAL,fontWeight:700,fontSize:12,margin:"0 0 10px",textTransform:"uppercase"}}>Test preparation resources</p>
-        {[
-          {name:"SHL Direct",url:"shldirect.com",desc:"Free numerical and verbal reasoning practice tests — the same format used by many large engineering employers"},
-          {name:"JobTestPrep",url:"jobtestprep.co.uk",desc:"Paid service but excellent mechanical reasoning practice. Worth the subscription if applying to Babcock, Leonardo or BAE Systems"},
-          {name:"Assessment Day",url:"assessmentday.co.uk",desc:"Free spatial reasoning and mechanical aptitude tests"},
-          {name:"Khan Academy",url:"khanacademy.org",desc:"Free Maths revision — percentages, ratios, algebra. Builds the numerical foundation for reasoning tests"},
-        ].map((r,i)=>(
-          <div key={i} style={{display:"flex",gap:10,marginBottom:10,paddingBottom:10,borderBottom:i<3?"1px solid #F0F4F8":"none",alignItems:"flex-start"}}>
-            <div style={{width:5,height:5,background:TEAL,borderRadius:99,flexShrink:0,marginTop:5}}/>
-            <div><p style={{color:NAVY,fontWeight:700,fontSize:13,margin:"0 0 2px"}}>{r.name} — {r.url}</p><p style={{color:MID,fontSize:12,margin:0}}>{r.desc}</p></div>
-          </div>
-        ))}
-      </Card>
+      <PageHeader icon="🧮" title="Tests and Assessment Centre" subtitle="Numerical reasoning, mechanical reasoning, situational judgement and full assessment centre preparation."/>
+      <InfoBox text="Online tests screen out the majority of applicants at major engineering employers before a human reads your application. Practice under timed conditions — not just untimed reading." type="warning"/>
+      <NavTabBar options={[{id:"numerical",label:"🔢 Numerical"},{id:"mechanical",label:"⚙️ Mechanical"},{id:"sjt",label:"🎯 Judgement"},{id:"ac",label:"🏢 Assessment Centre"}]} active={cat} onSelect={id=>{setCat(id);setReveal({});}}/>
+
+      {cat==="numerical"&&(
+        <div>
+          <InfoBox text="These questions use the same format as SHL and Cubiks tests used by BAE Systems, Babcock, Leonardo and Spirit AeroSystems. Two or three calculation steps required under time pressure. Under 60 seconds per question." type="steel"/>
+          {numQs.map((q,i)=>(
+            <Card key={i}>
+              <p style={{color:NAVY,fontWeight:700,fontSize:14,margin:"0 0 12px",lineHeight:1.4}}>Q{i+1}: {q.q}</p>
+              <div style={{display:"flex",flexDirection:"column",gap:6,marginBottom:12}}>
+                {q.opts.map((opt,j)=>(
+                  <button key={j} onClick={()=>setReveal(r=>({...r,[i]:j}))} style={{background:reveal[i]===j?(opt===q.a?GREEN:RUST):WHITE,border:`1px solid ${reveal[i]===j?(opt===q.a?GREEN:RUST):"#E2E8F0"}`,borderRadius:8,padding:"9px 12px",textAlign:"left",cursor:"pointer",fontFamily:"inherit",color:reveal[i]===j?WHITE:NAVY,fontSize:13}}>
+                    {opt}
+                  </button>
+                ))}
+              </div>
+              {reveal[i]!==undefined&&(
+                <div style={{background:"#EFF6FF",borderLeft:`3px solid ${STEEL}`,borderRadius:8,padding:"10px 12px"}}>
+                  <p style={{color:STEEL,fontWeight:700,fontSize:11,textTransform:"uppercase",margin:"0 0 4px"}}>Working</p>
+                  <p style={{color:"#1E3A8A",fontSize:13,lineHeight:1.65,margin:0}}>{q.why}</p>
+                </div>
+              )}
+            </Card>
+          ))}
+        </div>
+      )}
+
+      {cat==="mechanical"&&(
+        <div>
+          <InfoBox text="Mechanical reasoning tests your intuitive understanding of physical systems — gears, levers, pulleys, belts. No A-level physics needed. You need to understand the principles." type="info"/>
+          {mechQs.map((q,i)=>(
+            <Card key={i}>
+              <p style={{color:NAVY,fontWeight:700,fontSize:14,margin:"0 0 12px",lineHeight:1.4}}>Q{i+1}: {q.q}</p>
+              <div style={{display:"flex",flexDirection:"column",gap:6,marginBottom:12}}>
+                {q.opts.map((opt,j)=>(
+                  <button key={j} onClick={()=>setReveal(r=>({...r,[`m${i}`]:j}))} style={{background:reveal[`m${i}`]===j?(opt===q.a?GREEN:RUST):WHITE,border:`1px solid ${reveal[`m${i}`]===j?(opt===q.a?GREEN:RUST):"#E2E8F0"}`,borderRadius:8,padding:"9px 12px",textAlign:"left",cursor:"pointer",fontFamily:"inherit",color:reveal[`m${i}`]===j?WHITE:NAVY,fontSize:13}}>
+                    {opt}
+                  </button>
+                ))}
+              </div>
+              {reveal[`m${i}`]!==undefined&&(
+                <div style={{background:"#EFF6FF",borderLeft:`3px solid ${STEEL}`,borderRadius:8,padding:"10px 12px"}}>
+                  <p style={{color:"#1E3A8A",fontSize:13,lineHeight:1.65,margin:0}}>{q.why}</p>
+                </div>
+              )}
+            </Card>
+          ))}
+          <Card>
+            <p style={{color:TEAL,fontWeight:700,fontSize:12,margin:"0 0 8px",textTransform:"uppercase"}}>Practice resources</p>
+            {[{name:"Assessment Day",url:"assessmentday.co.uk",desc:"Free mechanical aptitude tests"},
+              {name:"JobTestPrep",url:"jobtestprep.co.uk",desc:"Paid — best mechanical reasoning practice, used by Babcock and BAE applicants"},
+              {name:"Mechanical Comprehension Tests",url:"practiceaptitudetests.com",desc:"Free practice with worked explanations"}].map((r,i)=>(
+              <div key={i} style={{display:"flex",gap:10,marginBottom:8,paddingBottom:8,borderBottom:i<2?"1px solid #F0F4F8":"none",alignItems:"flex-start"}}>
+                <div style={{width:5,height:5,background:TEAL,borderRadius:99,flexShrink:0,marginTop:5}}/>
+                <div><p style={{color:NAVY,fontWeight:700,fontSize:13,margin:"0 0 2px"}}>{r.name} — {r.url}</p><p style={{color:MID,fontSize:12,margin:0}}>{r.desc}</p></div>
+              </div>
+            ))}
+          </Card>
+        </div>
+      )}
+
+      {cat==="sjt"&&(
+        <div>
+          <InfoBox text="In engineering SJTs, the best answer usually reflects safety first, then responsibility, then teamwork. Any answer that prioritises completing work over raising a safety concern will score poorly." type="warning"/>
+          {sjtQs.map((q,i)=>(
+            <Card key={i}>
+              <p style={{color:MID,fontSize:11,fontWeight:700,textTransform:"uppercase",margin:"0 0 6px"}}>Scenario {i+1}</p>
+              <p style={{color:NAVY,fontWeight:700,fontSize:14,margin:"0 0 14px",lineHeight:1.4}}>{q.scenario}</p>
+              <ExampleToggle weak={q.weak} strong={q.strong} weakLabel="✗ Poor response" strongLabel="✓ Best response"/>
+              <div style={{background:"#EFF6FF",borderLeft:`3px solid ${STEEL}`,borderRadius:8,padding:"9px 12px",marginTop:8}}>
+                <p style={{color:"#1E3A8A",fontSize:12,lineHeight:1.6,margin:0}}>💡 {q.why}</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      )}
+
+      {cat==="ac"&&(
+        <div>
+          <InfoBox text="Assessment centres are used by BAE Systems, Babcock, Leonardo, Weir Group and ScottishPower. You are observed throughout the entire day — not just during formal exercises. Treat every part of the day as part of the assessment." type="warning"/>
+          <Card style={{borderLeft:`4px solid ${STEEL}`,background:"#EFF6FF",marginBottom:16}}>
+            <p style={{color:"#1E3A8A",fontWeight:800,fontSize:14,margin:"0 0 8px"}}>The critical point most candidates miss</p>
+            <p style={{color:"#1E3A8A",fontSize:13,lineHeight:1.7,margin:0}}>Many candidates relax during breaks, tours or lunch and make a poor impression without realising it. How you speak to other candidates, how you behave when waiting, and how you engage during informal parts of the day all contribute to the assessors' view of you. Be genuinely professional throughout — not performatively so.</p>
+          </Card>
+          <Card style={{marginBottom:12}}>
+            <p style={{color:NAVY,fontWeight:800,fontSize:14,margin:"0 0 12px"}}>What assessors are actually watching in the group exercise</p>
+            <p style={{color:"#444",fontSize:13,lineHeight:1.65,margin:"0 0 12px"}}>The group exercise is the most misunderstood element. Many candidates believe the goal is to lead or to speak the most. It is not. Assessors are watching for:</p>
+            {["Can this person listen as well as speak?","Do they help the group move forward or do they create friction?","Are they aware of others — or only focused on themselves?","Can they manage disagreement without becoming defensive?","Do they show the kind of behaviour we would want in our workplace every day?"].map((item,i)=>(
+              <div key={i} style={{display:"flex",gap:10,marginBottom:7,alignItems:"flex-start"}}>
+                <div style={{width:5,height:5,background:GREEN,borderRadius:99,flexShrink:0,marginTop:5}}/>
+                <p style={{color:"#444",fontSize:13,lineHeight:1.5,margin:0}}>{item}</p>
+              </div>
+            ))}
+          </Card>
+          {acScenarios.map((sc,i)=>(
+            <Card key={i}>
+              <p style={{color:STEEL,fontWeight:800,fontSize:14,margin:"0 0 6px"}}>{sc.title}</p>
+              <p style={{color:"#444",fontSize:13,lineHeight:1.6,margin:"0 0 12px"}}>{sc.desc}</p>
+              {sc.watch&&(
+                <>
+                  <p style={{color:GREEN,fontSize:11,fontWeight:700,textTransform:"uppercase",margin:"0 0 6px"}}>What assessors watch for</p>
+                  {sc.watch.map((w,j)=><div key={j} style={{display:"flex",gap:8,marginBottom:5,alignItems:"flex-start"}}><div style={{width:5,height:5,background:GREEN,borderRadius:99,flexShrink:0,marginTop:5}}/><p style={{color:"#444",fontSize:13,margin:0}}>{w}</p></div>)}
+                  <p style={{color:RUST,fontSize:11,fontWeight:700,textTransform:"uppercase",margin:"12px 0 6px"}}>Common mistakes to avoid</p>
+                  {sc.avoid.map((a,j)=><div key={j} style={{display:"flex",gap:8,marginBottom:5,alignItems:"flex-start"}}><div style={{width:5,height:5,background:RUST,borderRadius:99,flexShrink:0,marginTop:5}}/><p style={{color:"#444",fontSize:13,margin:0}}>{a}</p></div>)}
+                </>
+              )}
+              {sc.model&&(
+                <>
+                  <p style={{color:GREEN,fontSize:11,fontWeight:700,textTransform:"uppercase",margin:"12px 0 6px"}}>Model answer</p>
+                  <div style={{background:"#F0FDF4",borderLeft:`3px solid ${GREEN}`,borderRadius:8,padding:"11px 13px"}}>
+                    <p style={{color:"#14532D",fontSize:12,lineHeight:1.75,margin:0,whiteSpace:"pre-line",fontFamily:"monospace"}}>{sc.model}</p>
+                  </div>
+                </>
+              )}
+              <div style={{background:"#FFFBEB",borderLeft:`3px solid ${AMBER}`,borderRadius:8,padding:"9px 12px",marginTop:10}}>
+                <p style={{color:"#92400E",fontSize:12,lineHeight:1.6,margin:0}}>💡 {sc.tip}</p>
+              </div>
+            </Card>
+          ))}
+          <Card>
+            <p style={{color:TEAL,fontWeight:700,fontSize:12,margin:"0 0 10px",textTransform:"uppercase"}}>Day before checklist</p>
+            {["I know the exact location and have planned my journey with a backup route","I know what time to arrive and aim to be there 15 minutes early","My clothes are prepared — smart, clean and appropriate for an engineering workplace","I have researched the company and can name at least two things they make or do","I have three STAR-structured examples ready for competency questions","I have two or three questions prepared to ask the employer","I know my CV well enough to speak to every item on it","I have a notepad and pen ready"].map((item,i)=>(
+              <div key={i} style={{display:"flex",gap:10,marginBottom:7,alignItems:"flex-start"}}>
+                <div style={{width:18,height:18,border:`2px solid ${TEAL}`,borderRadius:4,flexShrink:0,marginTop:1}}/>
+                <p style={{color:"#444",fontSize:13,lineHeight:1.5,margin:0}}>{item}</p>
+              </div>
+            ))}
+          </Card>
+        </div>
+      )}
     </div>
   );
 }
